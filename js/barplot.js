@@ -8,7 +8,7 @@ var svgHeight = 300;
 var barPadding = 5;
 var barWidth = (svgWidth / dataset.length);
 
-var svg = d3.select('#chart')
+var svg = d3.select('#barplot')
             .append('svg')
             .attr('width', svgWidth)
             .attr('height', svgHeight);
