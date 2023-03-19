@@ -1,26 +1,30 @@
-var data = [];
-
+var dataset = [];
 for (var i = 0; i < 10; i++) {
-    data.push(Math.random() * 100);
+  dataset.push(Math.random() * 50);
 }
 
-var svg = d3.select("#barplot")
-    .append("svg")
-    .attr("width", 400)
-    .attr("height", 300);
+var svgWidth = 500;
+var svgHeight = 300;
+var barPadding = 5;
+var barWidth = (svgWidth / dataset.length);
 
-var bars = svg.selectAll("rect")
-    .data(data)
-    .enter()
-    .append("rect")
-    .attr("x", function(d, i) {
-        return i * 40;
-    })
-    .attr("y", function(d) {
-        return 300 - d;
-    })
-    .attr("width", 30)
-    .attr("height", function(d) {
-        return d;
-    })
-    .attr("fill", "blue");
+var svg = d3.select('#chart')
+            .append('svg')
+            .attr('width', svgWidth)
+            .attr('height', svgHeight);
+
+var bars = svg.selectAll('rect')
+              .data(dataset)
+              .enter()
+              .append('rect')
+              .attr('x', function(d, i) {
+                return i * barWidth;
+              })
+              .attr('y', function(d) {
+                return svgHeight - d;
+              })
+              .attr('width', barWidth - barPadding)
+              .attr('height', function(d) {
+                return d;
+              })
+              .attr('fill', 'steelblue');
