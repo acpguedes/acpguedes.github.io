@@ -3,8 +3,8 @@ for (var i = 0; i < 10; i++) {
   dataset.push(Math.random() * 50);
 }
 
-var svgWidth = 500;
-var svgHeight = 300;
+var svgWidth = 300;
+var svgHeight = 200;
 var barPadding = 5;
 var barWidth = (svgWidth / dataset.length);
 
