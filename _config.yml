@@ -1,0 +1,50 @@
+# _config.yml
+title: "Blog do Aure"
+author: "Aureliano Guedes"
+linkedin_url: "https://www.linkedin.com/in/aureliano-guedes-3091802"
+cover_image: "/assets/images/cover.jpeg"
+profile_image: "/assets/images/profile.jpeg"
+skills: "Data Science | MLOps | LLM | Machine Learning | Unsupervised Learning | Cluster Analysis | Classification"
+
+# URL do site
+url: "http://127.0.0.1:4000"
+baseurl: "" # Deixe vazio se o site estiver na raiz do domínio
+
+# Configurações de construção
+incremental: false
+future: true
+
+# Plugins
+plugins:
+  - jekyll-paginate
+
+# Paginação
+paginate: 5
+paginate_path: "/page:num/"
+
+# Configuração de URLs permanentes para postagens
+permalink: /:categories/:title/
+
+# Excluir arquivos da construção
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - Rakefile
+  - /site.pages/
+  - /site.posts/
+  - node_modules
+  - vendor
+
+# Configurações padrão para páginas e postagens
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{ page.title | escape }} - {{ site.title | escape }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <img src="{{ site.cover_image | relative_url }}" alt="Capa" class="cover-image">
+      <div class="profile-info">
+        <img src="{{ site.profile_image | relative_url }}" alt="Minha Foto" class="profile-photo">
+        <div class="author-details">
+          <p><strong><a href="{{ site.linkedin_url }}" target="_blank">{{ site.author }}</a></strong></p>
+          <p>{{ site.skills }}</p>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="content-wrapper">
+    <div id="sidebar">
+      <nav>
+        <ul>
+          <li><a href="{{ '/' | relative_url }}">Home</a></li>
+          <li>
+            <a href="{{ '/DataScience/' | relative_url }}">Data Science</a>
+            <ul>
+              <li>
+                <a href="{{ '/DataScience/TreeBasedModels/' | relative_url }}">Tree Based Models</a>
+                <ul>
+                  <li><a href="{{ '/DataScience/TreeBasedModels/DecisionTree/' | relative_url }}">Decision Tree</a></li>
+                  <li><a href="{{ '/DataScience/TreeBasedModels/RandomForest/' | relative_url }}">Random Forest</a></li>
+                </ul>
+              </li>
+              <li><a href="{{ '/DataScience/NeuralNetworkModels/' | relative_url }}">Neural Network Models</a></li>
+            </ul>
+          </li>
+          <li><a href="{{ '/MLEngineer/' | relative_url }}">ML Engineer</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="content">
+      {% if paginator %}
+        <div class="posts">
+          {% for post in paginator.posts %}
+            <article class="post">
+              <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+              <p>{{ post.excerpt }}</p>
+            </article>
+          {% endfor %}
+        </div>
+        <div class="pagination">
+          {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path | relative_url }}" class="previous">Anterior</a>
+          {% endif %}
+          {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | relative_url }}" class="next">Próximo</a>
+          {% endif %}
+        </div>
+      {% else %}
+        {{ content }}
+      {% endif %}
+    </div>
+  </div>
+  <footer>
+    <p>&copy; {{ site.author }} - {{ "now" | date: "%Y" }}</p>
+  </footer>
+</body>
+</html>
