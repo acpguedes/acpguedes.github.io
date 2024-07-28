@@ -20,6 +20,15 @@
       </div>
     </div>
   </header>
+
+  <!-- Sticky Navigation -->
+  <div class="sticky-nav">
+    <a href="#objectives">Objectives</a>
+    <a href="#news">News</a>
+    <a href="#about-me">About Me</a>
+    <a href="#future">Future</a>
+  </div>
+
   <div class="content-wrapper">
     <div id="sidebar">
       <nav>
@@ -68,5 +77,19 @@
   <footer>
     <p>&copy; {{ site.author }} - {{ "now" | date: "%Y" }}</p>
   </footer>
+  <script>
+    window.onscroll = function() {myFunction()};
+
+    var navbar = document.querySelector(".sticky-nav");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+  </script>
 </body>
 </html>

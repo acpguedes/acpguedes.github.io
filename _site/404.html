@@ -15,11 +15,20 @@
         <img src="/assets/images/profile.jpeg" alt="Minha Foto" class="profile-photo">
         <div class="author-details">
           <p><strong><a href="https://www.linkedin.com/in/aureliano-guedes-3091802" target="_blank">Aureliano Guedes</a></strong></p>
-          <p>Data Science | MLOps | LLM | Machine Learning | Unsupervised Learning | Cluster Analysis | Classification</p>
+          <p>Data Science | MLOps | ML Engineer | Data Engineer</p>
         </div>
       </div>
     </div>
   </header>
+
+  <!-- Sticky Navigation -->
+  <div class="sticky-nav">
+    <a href="#objectives">Objectives</a>
+    <a href="#news">News</a>
+    <a href="#about-me">About Me</a>
+    <a href="#future">Future</a>
+  </div>
+
   <div class="content-wrapper">
     <div id="sidebar">
       <nav>
@@ -71,5 +80,19 @@
   <footer>
     <p>&copy; Aureliano Guedes - 2024</p>
   </footer>
+  <script>
+    window.onscroll = function() {myFunction()};
+
+    var navbar = document.querySelector(".sticky-nav");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+  </script>
 </body>
 </html>
