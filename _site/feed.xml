@@ -1,16 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://127.0.0.1:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://127.0.0.1:4000/" rel="alternate" type="text/html" /><updated>2024-07-28T18:55:46-03:00</updated><id>http://127.0.0.1:4000/feed.xml</id><title type="html">Blog do Aure</title><author><name>Aureliano Guedes</name></author><entry><title type="html">Data Science Overview</title><link href="http://127.0.0.1:4000/DataScience/" rel="alternate" type="text/html" title="Data Science Overview" /><published>2024-07-28T07:00:00-03:00</published><updated>2024-07-28T07:00:00-03:00</updated><id>http://127.0.0.1:4000/data-science</id><content type="html" xml:base="http://127.0.0.1:4000/DataScience/"><![CDATA[]]></content><author><name>Aureliano Guedes</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Decision Tree</title><link href="http://127.0.0.1:4000/DataScience/TreeBasedModels/DecisionTree/" rel="alternate" type="text/html" title="Decision Tree" /><published>2024-07-28T07:00:00-03:00</published><updated>2024-07-28T07:00:00-03:00</updated><id>http://127.0.0.1:4000/DataScience/TreeBasedModels/decision-tree</id><content type="html" xml:base="http://127.0.0.1:4000/DataScience/TreeBasedModels/DecisionTree/"><![CDATA[]]></content><author><name>Aureliano Guedes</name></author><category term="data-science" /><category term="tree-based-models" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Random Forest</title><link href="http://127.0.0.1:4000/DataScience/TreeBasedModels/RandomForest/" rel="alternate" type="text/html" title="Random Forest" /><published>2024-07-28T07:00:00-03:00</published><updated>2024-07-28T07:00:00-03:00</updated><id>http://127.0.0.1:4000/DataScience/TreeBasedModels/random-forest</id><content type="html" xml:base="http://127.0.0.1:4000/DataScience/TreeBasedModels/RandomForest/"><![CDATA[]]></content><author><name>Aureliano Guedes</name></author><category term="data-science" /><category term="tree-based-models" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Tree Based Models</title><link href="http://127.0.0.1:4000/DataScience/TreeBasedModels/" rel="alternate" type="text/html" title="Tree Based Models" /><published>2024-07-28T07:00:00-03:00</published><updated>2024-07-28T07:00:00-03:00</updated><id>http://127.0.0.1:4000/DataScience/tree-based-models</id><content type="html" xml:base="http://127.0.0.1:4000/DataScience/TreeBasedModels/"><![CDATA[]]></content><author><name>Aureliano Guedes</name></author><category term="data-science" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Neural Network Models Overview</title><link href="http://127.0.0.1:4000/DataScience/NeuralNetworkModels/" rel="alternate" type="text/html" title="Neural Network Models Overview" /><published>2024-07-28T00:00:00-03:00</published><updated>2024-07-28T00:00:00-03:00</updated><id>http://127.0.0.1:4000/DataScience/neural-network-models</id><content type="html" xml:base="http://127.0.0.1:4000/DataScience/NeuralNetworkModels/"><![CDATA[]]></content><author><name>Aureliano Guedes</name></author><category term="data-science" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Rag Postgres Tutorial</title><link href="http://127.0.0.1:4000/rag-postgres-tutorial/" rel="alternate" type="text/html" title="Rag Postgres Tutorial" /><published>2024-07-28T00:00:00-03:00</published><updated>2024-07-28T00:00:00-03:00</updated><id>http://127.0.0.1:4000/rag-postgres-tutorial</id><content type="html" xml:base="http://127.0.0.1:4000/rag-postgres-tutorial/"><![CDATA[<h3 id="tutorial-creating-a-database-for-rag-using-pdfs-and-postgresql">Tutorial: Creating a Database for RAG using PDFs and PostgreSQL</h3>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-07-28T20:46:13-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Blog do Aure</title><author><name>Aureliano Guedes</name></author><entry><title type="html">Data Science Overview</title><link href="http://localhost:4000/DataScience/" rel="alternate" type="text/html" title="Data Science Overview" /><published>2024-07-28T07:00:00-03:00</published><updated>2024-07-28T07:00:00-03:00</updated><id>http://localhost:4000/data-science</id><content type="html" xml:base="http://localhost:4000/DataScience/"><![CDATA[]]></content><author><name>Aureliano Guedes</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Decision Tree</title><link href="http://localhost:4000/DataScience/TreeBasedModels/DecisionTree/" rel="alternate" type="text/html" title="Decision Tree" /><published>2024-07-28T07:00:00-03:00</published><updated>2024-07-28T07:00:00-03:00</updated><id>http://localhost:4000/DataScience/TreeBasedModels/decision-tree</id><content type="html" xml:base="http://localhost:4000/DataScience/TreeBasedModels/DecisionTree/"><![CDATA[]]></content><author><name>Aureliano Guedes</name></author><category term="data-science" /><category term="tree-based-models" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">ML Engineer Overview</title><link href="http://localhost:4000/MlEngineer/" rel="alternate" type="text/html" title="ML Engineer Overview" /><published>2024-07-28T07:00:00-03:00</published><updated>2024-07-28T07:00:00-03:00</updated><id>http://localhost:4000/ml-engineer</id><content type="html" xml:base="http://localhost:4000/MlEngineer/"><![CDATA[]]></content><author><name>Aureliano Guedes</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">RAG postgres</title><link href="http://localhost:4000/MlEngineer/Rag/RagPostgresTutorial/" rel="alternate" type="text/html" title="RAG postgres" /><published>2024-07-28T07:00:00-03:00</published><updated>2024-07-28T07:00:00-03:00</updated><id>http://localhost:4000/MlEngineer/Rag/rag-postgres-tutorial</id><content type="html" xml:base="http://localhost:4000/MlEngineer/Rag/RagPostgresTutorial/"><![CDATA[<h1 id="tutorial-creating-a-database-for-rag-using-pdfs-and-postgresql">Tutorial: Creating a Database for RAG using PDFs and PostgreSQL</h1>
 
 <h2 id="introduction">Introduction</h2>
-<p>In this tutorial, we will create a database for Retrieve and Generate (RAG) applications using PDFs and PostgreSQL. We will use the OpenAI API to generate text embeddings, which will be stored in a PostgreSQL database to facilitate search and information retrieval.</p>
 
-<p>Before we begin, ensure you have <a href="#">PostgreSQL installed and configured</a> on your machine. If not, please follow this <a href="#">installation guide</a> and <a href="#">create a new database</a> for this tutorial.</p>
+<p>In this tutorial, we will guide you through the process of creating a database for Retrieval-Augmented Generation (RAG) applications using PDFs as source of information and PostgreSQL as database to store. This setup leverages the OpenAI API to generate text embeddings, which are then stored in a PostgreSQL database to facilitate efficient search and information retrieval.</p>
+
+<p>Before starting, ensure that PostgreSQL is installed and configured. If you need assistance, follow the <a href="https://www.postgresql.org/docs/current/tutorial-install.html">official installation guide</a> and <a href="#">create a new database</a>.</p>
 
 <h2 id="prerequisites">Prerequisites</h2>
+
+<p>To follow along, you will need:</p>
 <ul>
   <li>Python installed on your machine</li>
   <li>PostgreSQL installed and configured</li>
   <li>Access to the OpenAI API</li>
-  <li>Required Python libraries:
+  <li>The following Python libraries:
     <ul>
       <li><code class="language-plaintext highlighter-rouge">psycopg2</code></li>
       <li><code class="language-plaintext highlighter-rouge">openai</code></li>
@@ -20,18 +23,20 @@
   </li>
 </ul>
 
-<h2 id="step-1-environment-setup">Step 1: Environment Setup</h2>
-<ol>
-  <li><strong>Install the necessary libraries</strong>:
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>psycopg2 openai PyPDF2 langchain
-</code></pre></div>    </div>
-  </li>
-  <li><strong>Set up the environment variable for the OpenAI API</strong>:
-Ensure that the <code class="language-plaintext highlighter-rouge">OPENAI_API_KEY</code> environment variable is set with your OpenAI API key.</li>
-</ol>
+<h2 id="hands-on">Hands-on</h2>
 
-<h2 id="step-2-extracting-text-from-pdfs">Step 2: Extracting Text from PDFs</h2>
-<p>Create a function to extract text from PDF files using <code class="language-plaintext highlighter-rouge">PyPDF2</code>:</p>
+<h3 id="step-1-environment-setup">Step 1: Environment Setup</h3>
+
+<p>First, install the necessary libraries:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>psycopg2 openai PyPDF2 langchain
+</code></pre></div></div>
+
+<p>Set up the environment variable for the OpenAI API key. Ensure the <code class="language-plaintext highlighter-rouge">OPENAI_API_KEY</code> environment variable is set. For instructions, refer to <a href="https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety">this guide</a>.</p>
+
+<h3 id="step-2-extracting-text-from-pdfs">Step 2: Extracting Text from PDFs</h3>
+
+<p>Use the following function to extract text from PDF files using PyPDF2:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">PyPDF2</span> <span class="kn">import</span> <span class="n">PdfReader</span>
 
@@ -47,8 +52,9 @@ Ensure that the <code class="language-plaintext highlighter-rouge">OPENAI_API_KE
         <span class="k">return</span> <span class="bp">None</span>
 </code></pre></div></div>
 
-<h2 id="step-3-generating-embeddings-with-openai-api">Step 3: Generating Embeddings with OpenAI API</h2>
-<p>Create a class to generate embeddings using the OpenAI API. The method <code class="language-plaintext highlighter-rouge">embed_documents</code> allows setting the model, with a default of “text-embedding-3-large”:</p>
+<h3 id="step-3-generating-embeddings-with-openai-api">Step 3: Generating Embeddings with OpenAI API</h3>
+
+<p>The class below generates embeddings using the OpenAI API. The <code class="language-plaintext highlighter-rouge">embed_documents</code> method allows specifying a model, with the default being <code class="language-plaintext highlighter-rouge">"text-embedding-3-large"</code>:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">openai</span>
 <span class="kn">import</span> <span class="n">time</span>
@@ -61,15 +67,14 @@ Ensure that the <code class="language-plaintext highlighter-rouge">OPENAI_API_KE
             <span class="k">return</span> <span class="p">[]</span>
 
         <span class="n">all_embeddings</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">batch_size</span> <span class="o">=</span> <span class="mi">2048</span>  <span class="c1"># Token limit per batch
+        <span class="n">batch_size</span> <span class="ow">is</span> <span class="nb">set</span> <span class="n">to</span> <span class="mi">2048</span>  <span class="c1"># Token limit per batch
 </span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nf">len</span><span class="p">(</span><span class="n">valid_texts</span><span class="p">),</span> <span class="n">batch_size</span><span class="p">):</span>
             <span class="n">batch_texts</span> <span class="o">=</span> <span class="n">valid_texts</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="n">batch_size</span><span class="p">]</span>
             <span class="k">try</span><span class="p">:</span>
                 <span class="n">response</span> <span class="o">=</span> <span class="n">openai</span><span class="p">.</span><span class="n">Embedding</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span>
                     <span class="nb">input</span><span class="o">=</span><span class="n">batch_texts</span><span class="p">,</span>
-                    <span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span>
-                    <span class="n">max_tokens</span><span class="o">=</span><span class="n">batch_size</span>
+                    <span class="n">model</span><span class="o">=</span><span class="n">model</span>
                 <span class="p">)</span>
                 <span class="n">embeddings</span> <span class="o">=</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="sh">'</span><span class="s">embedding</span><span class="sh">'</span><span class="p">]</span> <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">response</span><span class="p">[</span><span class="sh">'</span><span class="s">data</span><span class="sh">'</span><span class="p">]]</span>
                 <span class="n">all_embeddings</span><span class="p">.</span><span class="nf">extend</span><span class="p">(</span><span class="n">embeddings</span><span class="p">)</span>
@@ -83,12 +88,13 @@ Ensure that the <code class="language-plaintext highlighter-rouge">OPENAI_API_KE
         <span class="k">return</span> <span class="n">all_embeddings</span>
 </code></pre></div></div>
 
-<p><strong>Note:</strong> You can specify a different model by changing the <code class="language-plaintext highlighter-rouge">model</code> parameter when calling the <code class="language-plaintext highlighter-rouge">embed_documents</code> method. Choose the model based on your specific needs, such as the size of the embedding vectors, computational efficiency, or the type of data being processed.</p>
+<p><strong>Note:</strong> You can specify a different model based on your needs, considering factors like vector size, computational efficiency, and data type.</p>
 
-<h2 id="step-4-postgresql-database-setup">Step 4: PostgreSQL Database Setup</h2>
-<ol>
-  <li><strong>Configure the database connection details</strong>:</li>
-</ol>
+<h3 id="step-4-postgresql-database-setup">Step 4: PostgreSQL Database Setup</h3>
+
+<p><strong>Note:</strong> We assume that you already have a database set up.</p>
+
+<p>Configure your database connection details:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">db_config</span> <span class="o">=</span> <span class="p">{</span>
     <span class="sh">'</span><span class="s">dbname</span><span class="sh">'</span><span class="p">:</span> <span class="sh">'</span><span class="s">rag_test</span><span class="sh">'</span><span class="p">,</span>
@@ -101,9 +107,13 @@ Ensure that the <code class="language-plaintext highlighter-rouge">OPENAI_API_KE
 <span class="n">connection_string</span> <span class="o">=</span> <span class="sa">f</span><span class="sh">"</span><span class="s">postgresql://</span><span class="si">{</span><span class="n">db_config</span><span class="p">[</span><span class="sh">'</span><span class="s">user</span><span class="sh">'</span><span class="p">]</span><span class="si">}</span><span class="s">:</span><span class="si">{</span><span class="n">db_config</span><span class="p">[</span><span class="sh">'</span><span class="s">password</span><span class="sh">'</span><span class="p">]</span><span class="si">}</span><span class="s">@</span><span class="si">{</span><span class="n">db_config</span><span class="p">[</span><span class="sh">'</span><span class="s">host</span><span class="sh">'</span><span class="p">]</span><span class="si">}</span><span class="s">:</span><span class="si">{</span><span class="n">db_config</span><span class="p">[</span><span class="sh">'</span><span class="s">port</span><span class="sh">'</span><span class="p">]</span><span class="si">}</span><span class="s">/</span><span class="si">{</span><span class="n">db_config</span><span class="p">[</span><span class="sh">'</span><span class="s">dbname</span><span class="sh">'</span><span class="p">]</span><span class="si">}</span><span class="sh">"</span>
 </code></pre></div></div>
 
-<ol>
-  <li><strong>Connect to the PostgreSQL database and clear tables</strong>:</li>
-</ol>
+<p><strong>Note:</strong> For production, avoid exposing sensitive information in your code. Use environment variables or secure vaults to manage credentials.</p>
+
+<h4 id="clearing-and-rebuilding-the-database">Clearing and Rebuilding the Database</h4>
+
+<p>Given that our dataset consists of only 6 PDF files totaling 23MB, it’s efficient to clear and rebuild the entire database rather than updating or appending new data. This approach is feasible for small datasets and simplifies the data management process.</p>
+
+<p>To clear existing tables:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">psycopg2</span>
 
@@ -118,14 +128,14 @@ Ensure that the <code class="language-plaintext highlighter-rouge">OPENAI_API_KE
 <span class="nf">clear_tables</span><span class="p">()</span>
 </code></pre></div></div>
 
-<h2 id="step-5-processing-and-storing-pdfs">Step 5: Processing and Storing PDFs</h2>
-<ol>
-  <li><strong>Function to process PDFs and store them in the database</strong>:</li>
-</ol>
+<h3 id="step-5-processing-and-storing-pdfs">Step 5: Processing and Storing PDFs</h3>
+
+<p>Process the PDFs and store them in the database:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">langchain.vectorstores.pgembedding</span> <span class="kn">import</span> <span class="n">PGEmbedding</span>
 <span class="kn">from</span> <span class="n">langchain.docstore.document</span> <span class="kn">import</span> <span class="n">Document</span>
 <span class="kn">from</span> <span class="n">langchain.text_splitter</span> <span class="kn">import</span> <span class="n">RecursiveCharacterTextSplitter</span>
+<span class="kn">import</span> <span class="n">os</span>
 
 <span class="k">def</span> <span class="nf">process_and_store_pdfs</span><span class="p">(</span><span class="n">directory</span><span class="p">):</span>
     <span class="n">documents</span> <span class="o">=</span> <span class="p">[]</span>
@@ -161,16 +171,15 @@ Ensure that the <code class="language-plaintext highlighter-rouge">OPENAI_API_KE
             <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Error inserting documents into the database: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
 </code></pre></div></div>
 
-<ol>
-  <li><strong>Process and store all PDFs in the directory</strong>:</li>
-</ol>
+<h4 id="set-the-path-to-your-pdf-files">Set the path to your PDF files:</h4>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pdf_directory</span> <span class="o">=</span> <span class="sh">'</span><span class="s">/path/to/your/pdfs</span><span class="sh">'</span>
 <span class="nf">process_and_store_pdfs</span><span class="p">(</span><span class="n">pdf_directory</span><span class="p">)</span>
 </code></pre></div></div>
 
-<h2 id="step-6-data-insertion-verification">Step 6: Data Insertion Verification</h2>
-<p>Verify that the data was inserted correctly:</p>
+<h3 id="step-6-data-insertion-verification">Step 6: Data Insertion Verification</h3>
+
+<p>Verify that the data was correctly inserted:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span><span class="p">:</span>
     <span class="k">with</span> <span class="n">psycopg2</span><span class="p">.</span><span class="nf">connect</span><span class="p">(</span><span class="n">connection_string</span><span class="p">)</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
@@ -186,4 +195,14 @@ Ensure that the <code class="language-plaintext highlighter-rouge">OPENAI_API_KE
 </code></pre></div></div>
 
 <h2 id="conclusion">Conclusion</h2>
-<p>This is a basic tutorial for setting up a system to extract text from PDFs, generate embeddings using the OpenAI API, and store these data in a PostgreSQL database. There are numerous enhancements you can make to improve this system, such as improving text extraction from PDFs, refining the text boundaries per chunk, and many others.</p>]]></content><author><name>Aureliano Guedes</name></author><summary type="html"><![CDATA[Tutorial: Creating a Database for RAG using PDFs and PostgreSQL]]></summary></entry></feed>
+
+<p>This tutorial has guided you through setting up a system to extract text from PDFs, generate embeddings using the OpenAI API, and store the data in a PostgreSQL database. You can enhance this system by improving text extraction, refining text chunking methods, and optimizing database interactions.</p>
+
+<p><strong>Note:</strong> This tutorial is designed for hands-on practice. If you want to understand how an embedding database works in depth, <a href="#">see this article</a>.</p>
+
+<p>There are many ways to improve the efficiency of a RAG database, such as:</p>
+<ul>
+  <li>Enhancing entity recognition and boundary detection</li>
+  <li>Optimizing database schema and indexing</li>
+  <li>Implementing advanced search and retrieval algorithms</li>
+</ul>]]></content><author><name>Aureliano Guedes</name></author><category term="ml-engineer" /><category term="rag" /><summary type="html"><![CDATA[Tutorial: Creating a Database for RAG using PDFs and PostgreSQL]]></summary></entry><entry><title type="html">RAG</title><link href="http://localhost:4000/MlEngineer/Rag/" rel="alternate" type="text/html" title="RAG" /><published>2024-07-28T07:00:00-03:00</published><updated>2024-07-28T07:00:00-03:00</updated><id>http://localhost:4000/MlEngineer/rag</id><content type="html" xml:base="http://localhost:4000/MlEngineer/Rag/"><![CDATA[]]></content><author><name>Aureliano Guedes</name></author><category term="ml-engineer" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Random Forest</title><link href="http://localhost:4000/DataScience/TreeBasedModels/RandomForest/" rel="alternate" type="text/html" title="Random Forest" /><published>2024-07-28T07:00:00-03:00</published><updated>2024-07-28T07:00:00-03:00</updated><id>http://localhost:4000/DataScience/TreeBasedModels/random-forest</id><content type="html" xml:base="http://localhost:4000/DataScience/TreeBasedModels/RandomForest/"><![CDATA[]]></content><author><name>Aureliano Guedes</name></author><category term="data-science" /><category term="tree-based-models" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Tree Based Models</title><link href="http://localhost:4000/DataScience/TreeBasedModels/" rel="alternate" type="text/html" title="Tree Based Models" /><published>2024-07-28T07:00:00-03:00</published><updated>2024-07-28T07:00:00-03:00</updated><id>http://localhost:4000/DataScience/tree-based-models</id><content type="html" xml:base="http://localhost:4000/DataScience/TreeBasedModels/"><![CDATA[]]></content><author><name>Aureliano Guedes</name></author><category term="data-science" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Neural Network Models Overview</title><link href="http://localhost:4000/DataScience/NeuralNetworkModels/" rel="alternate" type="text/html" title="Neural Network Models Overview" /><published>2024-07-28T00:00:00-03:00</published><updated>2024-07-28T00:00:00-03:00</updated><id>http://localhost:4000/DataScience/neural-network-models</id><content type="html" xml:base="http://localhost:4000/DataScience/NeuralNetworkModels/"><![CDATA[]]></content><author><name>Aureliano Guedes</name></author><category term="data-science" /><summary type="html"><![CDATA[]]></summary></entry></feed>

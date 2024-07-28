@@ -1,32 +1,46 @@
-
-### Tutorial: Creating a Database for RAG using PDFs and PostgreSQL
+---
+layout: default
+title: "RAG postgres"
+date: 2024-07-28 10:00:00
+categories: ml-engineer rag
+permalink: /MlEngineer/Rag/RagPostgresTutorial/
+---
+	
+# Tutorial: Creating a Database for RAG using PDFs and PostgreSQL
 
 ## Introduction
-In this tutorial, we will create a database for Retrieve and Generate (RAG) applications using PDFs and PostgreSQL. We will use the OpenAI API to generate text embeddings, which will be stored in a PostgreSQL database to facilitate search and information retrieval.
 
-Before we begin, ensure you have [PostgreSQL installed and configured](#) on your machine. If not, please follow this [installation guide](#) and [create a new database](#) for this tutorial.
+In this tutorial, we will guide you through the process of creating a database for Retrieval-Augmented Generation (RAG) applications using PDFs as source of information and PostgreSQL as database to store. This setup leverages the OpenAI API to generate text embeddings, which are then stored in a PostgreSQL database to facilitate efficient search and information retrieval.
+
+Before starting, ensure that PostgreSQL is installed and configured. If you need assistance, follow the [official installation guide](https://www.postgresql.org/docs/current/tutorial-install.html) and [create a new database](#).
 
 ## Prerequisites
+
+To follow along, you will need:
 - Python installed on your machine
 - PostgreSQL installed and configured
 - Access to the OpenAI API
-- Required Python libraries:
+- The following Python libraries:
   - `psycopg2`
   - `openai`
   - `PyPDF2`
   - `langchain`
 
-## Step 1: Environment Setup
-1. **Install the necessary libraries**:
-   ```bash
-   pip install psycopg2 openai PyPDF2 langchain
-   ```
+## Hands-on 
 
-2. **Set up the environment variable for the OpenAI API**:
-   Ensure that the `OPENAI_API_KEY` environment variable is set with your OpenAI API key.
+### Step 1: Environment Setup
 
-## Step 2: Extracting Text from PDFs
-Create a function to extract text from PDF files using `PyPDF2`:
+First, install the necessary libraries:
+
+```bash
+pip install psycopg2 openai PyPDF2 langchain
+```
+
+Set up the environment variable for the OpenAI API key. Ensure the `OPENAI_API_KEY` environment variable is set. For instructions, refer to [this guide](https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety).
+
+### Step 2: Extracting Text from PDFs
+
+Use the following function to extract text from PDF files using PyPDF2:
 
 ```python
 from PyPDF2 import PdfReader
@@ -43,8 +57,9 @@ def extract_text_from_pdf(pdf_path):
         return None
 ```
 
-## Step 3: Generating Embeddings with OpenAI API
-Create a class to generate embeddings using the OpenAI API. The method `embed_documents` allows setting the model, with a default of "text-embedding-3-large":
+### Step 3: Generating Embeddings with OpenAI API
+
+The class below generates embeddings using the OpenAI API. The `embed_documents` method allows specifying a model, with the default being `"text-embedding-3-large"`:
 
 ```python
 import openai
@@ -58,15 +73,14 @@ class OpenAIEmbeddings:
             return []
 
         all_embeddings = []
-        batch_size = 2048  # Token limit per batch
+        batch_size is set to 2048  # Token limit per batch
 
         for i in range(0, len(valid_texts), batch_size):
             batch_texts = valid_texts[i:i + batch_size]
             try:
                 response = openai.Embedding.create(
                     input=batch_texts,
-                    model=model,
-                    max_tokens=batch_size
+                    model=model
                 )
                 embeddings = [data['embedding'] for data in response['data']]
                 all_embeddings.extend(embeddings)
@@ -80,10 +94,13 @@ class OpenAIEmbeddings:
         return all_embeddings
 ```
 
-**Note:** You can specify a different model by changing the `model` parameter when calling the `embed_documents` method. Choose the model based on your specific needs, such as the size of the embedding vectors, computational efficiency, or the type of data being processed.
+**Note:** You can specify a different model based on your needs, considering factors like vector size, computational efficiency, and data type.
 
-## Step 4: PostgreSQL Database Setup
-1. **Configure the database connection details**:
+### Step 4: PostgreSQL Database Setup
+
+**Note:** We assume that you already have a database set up.
+
+Configure your database connection details:
 
 ```python
 db_config = {
@@ -97,7 +114,13 @@ db_config = {
 connection_string = f"postgresql://{db_config['user']}:{db_config['password']}@{db_config['host']}:{db_config['port']}/{db_config['dbname']}"
 ```
 
-2. **Connect to the PostgreSQL database and clear tables**:
+**Note:** For production, avoid exposing sensitive information in your code. Use environment variables or secure vaults to manage credentials.
+
+#### Clearing and Rebuilding the Database
+
+Given that our dataset consists of only 6 PDF files totaling 23MB, it's efficient to clear and rebuild the entire database rather than updating or appending new data. This approach is feasible for small datasets and simplifies the data management process. 
+
+To clear existing tables:
 
 ```python
 import psycopg2
@@ -113,13 +136,15 @@ def clear_tables():
 clear_tables()
 ```
 
-## Step 5: Processing and Storing PDFs
-1. **Function to process PDFs and store them in the database**:
+### Step 5: Processing and Storing PDFs
+
+Process the PDFs and store them in the database:
 
 ```python
 from langchain.vectorstores.pgembedding import PGEmbedding
 from langchain.docstore.document import Document
 from langchain.text_splitter import RecursiveCharacterTextSplitter
+import os
 
 def process_and_store_pdfs(directory):
     documents = []
@@ -155,15 +180,16 @@ def process_and_store_pdfs(directory):
             print(f"Error inserting documents into the database: {e}")
 ```
 
-2. **Process and store all PDFs in the directory**:
+#### Set the path to your PDF files:
 
 ```python
 pdf_directory = '/path/to/your/pdfs'
 process_and_store_pdfs(pdf_directory)
 ```
 
-## Step 6: Data Insertion Verification
-Verify that the data was inserted correctly:
+### Step 6: Data Insertion Verification
+
+Verify that the data was correctly inserted:
 
 ```python
 try:
@@ -180,4 +206,12 @@ connection.close()
 ```
 
 ## Conclusion
-This is a basic tutorial for setting up a system to extract text from PDFs, generate embeddings using the OpenAI API, and store these data in a PostgreSQL database. There are numerous enhancements you can make to improve this system, such as improving text extraction from PDFs, refining the text boundaries per chunk, and many others.
+
+This tutorial has guided you through setting up a system to extract text from PDFs, generate embeddings using the OpenAI API, and store the data in a PostgreSQL database. You can enhance this system by improving text extraction, refining text chunking methods, and optimizing database interactions.
+
+**Note:** This tutorial is designed for hands-on practice. If you want to understand how an embedding database works in depth, [see this article](#). 
+
+There are many ways to improve the efficiency of a RAG database, such as:
+- Enhancing entity recognition and boundary detection
+- Optimizing database schema and indexing
+- Implementing advanced search and retrieval algorithms
