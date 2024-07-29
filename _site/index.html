@@ -21,48 +21,75 @@
     </div>
   </header>
 
-  <!-- Sticky Navigation -->
-  <div class="sticky-nav">
-    <a href="#objectives">Objectives</a>
-    <a href="#news">News</a>
-    <a href="#about-me">About Me</a>
-    <a href="#future">Future</a>
-  </div>
-
   <div class="content-wrapper">
     <div id="sidebar">
       <nav>
         <ul>
           <li><a href="/">Home</a></li>
-          <li>
-            <a href="/DataScience/">Data Science</a>
-            <ul>
-              <li>
-                <a href="/DataScience/TreeBasedModels/">Tree Based Models</a>
+          
+          
+            <li>
+              <a href="">Data Science</a>
+              
                 <ul>
-                  <li><a href="/DataScience/TreeBasedModels/DecisionTree/">Decision Tree</a></li>
-                  <li><a href="/DataScience/TreeBasedModels/RandomForest/">Random Forest</a></li>
+                  
+                    <li>
+                      <a href="">Tree Based Models</a>
+                      
+                        <ul>
+                          
+                            <li><a href="/DataScience/TreeBasedModels/DecisionTree/">Decision Tree</a></li>
+                          
+                            <li><a href="/DataScience/TreeBasedModels/RandomForest/">Random Forest</a></li>
+                          
+                        </ul>
+                      
+                    </li>
+                  
+                    <li>
+                      <a href="/DataScience/NeuralNetworkModels/">Neural Network Models</a>
+                      
+                    </li>
+                  
+                    <li>
+                      <a href="/DataScience/Overview/">Overview</a>
+                      
+                    </li>
+                  
                 </ul>
-              </li>
-              <li><a href="/DataScience/NeuralNetworkModels/">Neural Network Models</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="/MlEngineer/">ML Engineer</a>
-            <ul>
-              <li><a href="/MlEngineer/Rag/">RAG</a>
+              
+            </li>
+          
+            <li>
+              <a href="">ML Engineer</a>
+              
                 <ul>
-                  <li><a href="/MlEngineer/Rag/RagPostgresTutorial/">RAG Postgres Tutorial</a></li>
+                  
+                    <li>
+                      <a href="/MlEngineer/Rag/">RAG</a>
+                      
+                        <ul>
+                          
+                            <li><a href="/MlEngineer/Rag/RagPostgresTutorial/">RAG Postgres Tutorial</a></li>
+                          
+                        </ul>
+                      
+                    </li>
+                  
+                    <li>
+                      <a href="/MlEngineer/Overview/">ML Engineer Overview</a>
+                      
+                    </li>
+                  
                 </ul>
-              </li>
-            </ul>
-          </li>
+              
+            </li>
+          
         </ul>
       </nav>
     </div>
     <div id="content">
-      
-        <h1 id="objectives">Objectives</h1>
+      <h1 id="objectives">Objectives</h1>
 <p><a id="objectives"></a>
 Welcome to a space where the complexities of data science, deep learning, and artificial intelligence are made simple and accessible. This blog is crafted to break down intricate concepts into easy-to-follow tutorials, ensuring you not only grasp the ‘how’ but also the ‘why’ behind each decision-making process. You’ll discover how to leverage data effectively to drive impactful solutions. Whether you’re a seasoned professional or just starting out, you’ll find valuable insights here to tackle real-world problems with confidence.</p>
 
@@ -90,25 +117,10 @@ Hi, I’m Aure (Aureliano Guedes), and my mission is to demystify the world of m
 <p><a id="future"></a>
 In the near future, I plan to create posts that will be useful even to non-technical people.</p>
 
-      
     </div>
   </div>
   <footer>
     <p>&copy; Aureliano Guedes - 2024</p>
   </footer>
-  <script>
-    window.onscroll = function() {myFunction()};
-
-    var navbar = document.querySelector(".sticky-nav");
-    var sticky = navbar.offsetTop;
-
-    function myFunction() {
-      if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky");
-      } else {
-        navbar.classList.remove("sticky");
-      }
-    }
-  </script>
 </body>
 </html>

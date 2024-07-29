@@ -1,0 +1,21 @@
+- name: Data Science
+  children:
+    - name: Tree Based Models
+      children:
+        - name: Decision Tree
+          url: /DataScience/TreeBasedModels/DecisionTree/
+        - name: Random Forest
+          url: /DataScience/TreeBasedModels/RandomForest/
+    - name: Neural Network Models
+      url: /DataScience/NeuralNetworkModels/
+    - name: Overview
+      url: /DataScience/Overview/
+- name: ML Engineer
+  children:
+    - name: RAG
+      url: /MlEngineer/Rag/
+      children:
+        - name: RAG Postgres Tutorial
+          url: /MlEngineer/Rag/RagPostgresTutorial/
+    - name: ML Engineer Overview
+      url: /MlEngineer/Overview/

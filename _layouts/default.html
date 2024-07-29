@@ -21,84 +21,42 @@
     </div>
   </header>
 
-  <!-- Sticky Navigation -->
-  <div class="sticky-nav">
-    <a href="#objectives">Objectives</a>
-    <a href="#news">News</a>
-    <a href="#about-me">About Me</a>
-    <a href="#future">Future</a>
-  </div>
-
   <div class="content-wrapper">
     <div id="sidebar">
       <nav>
         <ul>
           <li><a href="{{ '/' | relative_url }}">Home</a></li>
-          <li>
-            <a href="{{ '/DataScience/' | relative_url }}">Data Science</a>
-            <ul>
-              <li>
-                <a href="{{ '/DataScience/TreeBasedModels/' | relative_url }}">Tree Based Models</a>
+          {% assign categories = site.data.categories %}
+          {% for category in categories %}
+            <li>
+              <a href="{{ category.url | relative_url }}">{{ category.name }}</a>
+              {% if category.children %}
                 <ul>
-                  <li><a href="{{ '/DataScience/TreeBasedModels/DecisionTree/' | relative_url }}">Decision Tree</a></li>
-                  <li><a href="{{ '/DataScience/TreeBasedModels/RandomForest/' | relative_url }}">Random Forest</a></li>
+                  {% for child in category.children %}
+                    <li>
+                      <a href="{{ child.url | relative_url }}">{{ child.name }}</a>
+                      {% if child.children %}
+                        <ul>
+                          {% for grandchild in child.children %}
+                            <li><a href="{{ grandchild.url | relative_url }}">{{ grandchild.name }}</a></li>
+                          {% endfor %}
+                        </ul>
+                      {% endif %}
+                    </li>
+                  {% endfor %}
                 </ul>
-              </li>
-              <li><a href="{{ '/DataScience/NeuralNetworkModels/' | relative_url }}">Neural Network Models</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="{{ '/MlEngineer/' | relative_url }}">ML Engineer</a>
-            <ul>
-              <li><a href="{{ '/MlEngineer/Rag/' | relative_url }}">RAG</a>
-                <ul>
-                  <li><a href="{{ '/MlEngineer/Rag/RagPostgresTutorial/' | relative_url }}">RAG Postgres Tutorial</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
+              {% endif %}
+            </li>
+          {% endfor %}
         </ul>
       </nav>
     </div>
     <div id="content">
-      {% if paginator %}
-        <div class="posts">
-          {% for post in paginator.posts %}
-            <article class="post">
-              <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-              <p>{{ post.excerpt }}</p>
-            </article>
-          {% endfor %}
-        </div>
-        <div class="pagination">
-          {% if paginator.previous_page %}
-            <a href="{{ paginator.previous_page_path | relative_url }}" class="previous">Anterior</a>
-          {% endif %}
-          {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path | relative_url }}" class="next">Próximo</a>
-          {% endif %}
-        </div>
-      {% else %}
-        {{ content }}
-      {% endif %}
+      {{ content }}
     </div>
   </div>
   <footer>
     <p>&copy; {{ site.author }} - {{ "now" | date: "%Y" }}</p>
   </footer>
-  <script>
-    window.onscroll = function() {myFunction()};
-
-    var navbar = document.querySelector(".sticky-nav");
-    var sticky = navbar.offsetTop;
-
-    function myFunction() {
-      if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky");
-      } else {
-        navbar.classList.remove("sticky");
-      }
-    }
-  </script>
 </body>
 </html>
