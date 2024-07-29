@@ -1,21 +1,27 @@
 - name: Data Science
+  url: /data-science
   children:
-    - name: Tree Based Models
-      children:
-        - name: Decision Tree
-          url: /DataScience/TreeBasedModels/DecisionTree/
-        - name: Random Forest
-          url: /DataScience/TreeBasedModels/RandomForest/
-    - name: Neural Network Models
-      url: /DataScience/NeuralNetworkModels/
-    - name: Overview
-      url: /DataScience/Overview/
-- name: ML Engineer
+  - name: Tree Based Models
+    url: /data-science/tree-based-models
+    children:
+    - name: Random Forest
+      url: /data-science/tree-based-models/random-forest
+      children: []
+    - name: Gradient Boost
+      url: /data-science/tree-based-models/gradient-boost
+      children: []
+    - name: Decision Tree
+      url: /data-science/tree-based-models/decision-tree
+      children: []
+  - name: Neural Networks
+    url: /data-science/neural-networks
+    children: []
+- name: Ml Engineer
+  url: /ml-engineer
   children:
-    - name: RAG
-      url: /MlEngineer/Rag/
-      children:
-        - name: RAG Postgres Tutorial
-          url: /MlEngineer/Rag/RagPostgresTutorial/
-    - name: ML Engineer Overview
-      url: /MlEngineer/Overview/
+  - name: Rag
+    url: /ml-engineer/rag
+    children:
+    - name: Rag Postgres Tutorial
+      url: /ml-engineer/rag/rag-postgres-tutorial
+      children: []
