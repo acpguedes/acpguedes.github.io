@@ -4,7 +4,7 @@ author: "Aureliano Guedes"
 linkedin_url: "https://www.linkedin.com/in/aureliano-guedes-3091802"
 cover_image: "/assets/images/cover.jpeg"
 profile_image: "/assets/images/profile.jpeg"
-skills: "Data Science | MLOps | ML Engineer | Data Engineer"
+skills: "Lead Data Scientist | Industrial GenAI & ML Strategy | Refining & Energy Transition"
 
 # URL do site
 url: "http://127.0.0.1:4000"
@@ -16,6 +16,7 @@ future: true
 
 # Plugins
 plugins:
+  - jekyll-feed
   - jekyll-paginate
 
 # Paginação
@@ -31,8 +32,8 @@ exclude:
   - Gemfile.lock
   - README.md
   - Rakefile
-  - /site.pages/
-  - /site.posts/
+  - site.pages/
+  - site.posts/
   - node_modules
   - vendor
 
