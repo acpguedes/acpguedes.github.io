@@ -16,6 +16,7 @@ future: true
 
 # Plugins
 plugins:
+  - jekyll-feed
   - jekyll-paginate
 
 # Paginação
@@ -31,8 +32,8 @@ exclude:
   - Gemfile.lock
   - README.md
   - Rakefile
-  - /site.pages/
-  - /site.posts/
+  - site.pages/
+  - site.posts/
   - node_modules
   - vendor
 
