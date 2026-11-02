@@ -1,0 +1,13 @@
+<section class="author-band" aria-label="About the author">
+  <div class="who">
+    <img src="{{ site.profile_image | relative_url }}" alt="{{ site.author | escape }}" width="60" height="60">
+    <div>
+      <p>{{ site.intro }}</p>
+      <p class="aside">Before refineries, bioinformatics.</p>
+    </div>
+  </div>
+  <ul class="link-row">
+    <li><a class="accent" href="{{ '/about/' | relative_url }}">About</a></li>
+    <li><a href="{{ '/articles/' | relative_url }}">All articles</a></li>
+  </ul>
+</section>

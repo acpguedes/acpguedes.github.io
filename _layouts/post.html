@@ -1,12 +1,43 @@
 ---
 layout: default
 ---
-<article class="post">
-  <header class="post-header">
-    <h1>{{ page.title | escape }}</h1>
-    <p class="post-date">{% include post-date.html date=page.date %}</p>
-  </header>
-  <div class="post-content">
-    {{ content }}
-  </div>
-</article>
+<main>
+  <article>
+    <header class="post-header">
+      <div>
+        <p class="meta"><span class="kind">{{ page.kind | default: "Article" }}</span>{% if page.section %}<span aria-hidden="true">·</span><span>{{ page.section }}</span>{% endif %}</p>
+        <h1>{% if page.display_title %}{{ page.display_title }}{% else %}{{ page.title | escape }}{% endif %}</h1>
+        {%- if page.description %}<p class="dek">{{ page.description | escape }}</p>{% endif %}
+        <p class="byline"><img src="{{ site.profile_image | relative_url }}" alt="" width="28" height="28"><span class="name">{{ site.author | escape }}</span><span aria-hidden="true">·</span>{% include post-date.html date=page.date %}</p>
+      </div>
+      {% include post-art.html post=page class="post-plate" %}
+    </header>
+    <div class="post-body">
+      {%- if page.toc %}
+      <nav class="toc" aria-label="Contents">
+        <p class="toc-label">Contents</p>
+        <ol>{% for t in page.toc %}<li><a href="#{{ t.id }}">{{ t.label }}</a></li>{% endfor %}</ol>
+      </nav>
+      {%- endif %}
+      <div class="post-content">
+        {%- if page.toc %}
+        <nav class="toc-inline" aria-label="Contents">
+          <p class="toc-label">In this {{ page.kind | default: "article" | downcase }}</p>
+          <ol>{% for t in page.toc %}<li><a href="#{{ t.id }}">{{ t.label }}</a></li>{% endfor %}</ol>
+        </nav>
+        {%- endif %}
+        {{ content }}
+        <aside class="post-author" aria-label="About the author">
+          <img src="{{ site.profile_image | relative_url }}" alt="" width="48" height="48">
+          <div>
+            <p>{{ site.intro }}</p>
+            <ul class="link-row">
+              <li><a class="accent" href="{{ '/about/' | relative_url }}">About Aureliano</a></li>
+              <li><a href="{{ '/articles/' | relative_url }}">All articles</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </article>
+</main>

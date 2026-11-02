@@ -1,0 +1,73 @@
+{
+  "projectId": "852cb217-d574-446f-b7c0-c328b5a3f5a6",
+  "shape": "package",
+  "pkg": "@acpguedes/applied-science",
+  "globalName": "AppliedScience",
+  "buildCmd": "cd design-system && npm ci && npm run build",
+  "cssEntry": "dist/style.css",
+  "srcDir": "src",
+  "tsconfig": "tsconfig.json",
+  "runtimeFontPrefixes": [
+    "Newsreader",
+    "IBM Plex Mono"
+  ],
+  "docsDir": "component-docs",
+  "guidelinesGlob": [],
+  "overrides": {
+    "SiteFooter": {
+      "cardMode": "column"
+    },
+    "AuthorBand": {
+      "cardMode": "column"
+    },
+    "ArchiveList": {
+      "cardMode": "column"
+    },
+    "StepHeading": {
+      "cardMode": "column"
+    },
+    "Note": {
+      "cardMode": "column"
+    },
+    "PostAuthor": {
+      "cardMode": "column"
+    },
+    "CodeBlock": {
+      "cardMode": "column"
+    },
+    "Meta": {
+      "cardMode": "column"
+    },
+    "PageTitle": {
+      "cardMode": "column"
+    },
+    "LinkRow": {
+      "cardMode": "column"
+    },
+    "SiteHeader": {
+      "cardMode": "column",
+      "viewport": "1280x460"
+    },
+    "Cover": {
+      "cardMode": "column",
+      "viewport": "1280x1000"
+    },
+    "PostHeader": {
+      "cardMode": "column",
+      "viewport": "1280x1000"
+    },
+    "PostContent": {
+      "cardMode": "column",
+      "viewport": "1280x1100"
+    },
+    "Plate": {
+      "cardMode": "column",
+      "viewport": "1280x900"
+    },
+    "TableOfContents": {
+      "cardMode": "column",
+      "viewport": "1280x420"
+    }
+  },
+  "readmeHeader": ".design-sync/conventions.md"
+}

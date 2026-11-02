@@ -1,10 +1,36 @@
 ---
 layout: post
 title: "Storing PDF embeddings in PostgreSQL for RAG"
+display_title: "Storing <em>PDF embeddings</em> in PostgreSQL for RAG"
 description: "Extract text from PDFs, generate embeddings with Python, and store them in PostgreSQL."
 date: 2024-07-29
 categories: ml-engineer rag
 permalink: /ml-engineer/rag/rag-postgres-tutorial/
+kind: "Tutorial"
+section: "ML engineering / RAG"
+art: /assets/art/rag-postgres-tutorial.svg
+art_crop: /assets/art/rag-postgres-tutorial-crop.svg
+art_alt: "Engraving: a PDF page unfolds into chunks, the chunks become vectors and flow into a PostgreSQL cylinder."
+art_crop_alt: "Detail of the engraving: vectors arriving in a PostgreSQL cylinder."
+art_caption: "Plate I — A page unfolds into chunks, chunks into vectors, vectors into PostgreSQL."
+art_crop_caption: "Plate I, detail — vectors arriving in PostgreSQL."
+steps:
+  - { id: step-1-environment-setup, label: "Environment setup" }
+  - { id: step-2-extracting-text-from-pdfs, label: "Extracting text from PDFs" }
+  - { id: step-3-generating-embeddings-with-openai-api, label: "Generating embeddings" }
+  - { id: step-4-postgresql-database-setup, label: "PostgreSQL setup" }
+  - { id: step-5-processing-and-storing-pdfs, label: "Processing and storing PDFs" }
+  - { id: step-6-data-insertion-verification, label: "Verifying the insert" }
+toc:
+  - { id: introduction, label: "Introduction" }
+  - { id: prerequisites, label: "Prerequisites" }
+  - { id: step-1-environment-setup, label: "Environment setup" }
+  - { id: step-2-extracting-text-from-pdfs, label: "Extracting text from PDFs" }
+  - { id: step-3-generating-embeddings-with-openai-api, label: "Generating embeddings" }
+  - { id: step-4-postgresql-database-setup, label: "PostgreSQL setup" }
+  - { id: step-5-processing-and-storing-pdfs, label: "Processing and storing PDFs" }
+  - { id: step-6-data-insertion-verification, label: "Verifying the insert" }
+  - { id: conclusion, label: "Conclusion" }
 ---
 
 ## Introduction
@@ -27,7 +53,7 @@ To follow along, you will need:
 
 ## Hands-on 
 
-### Step 1: Environment Setup
+### <span class="step-label">Step 1</span>Environment Setup {#step-1-environment-setup}
 
 First, install the necessary libraries:
 
@@ -35,11 +61,11 @@ First, install the necessary libraries:
 pip install psycopg2 "openai<1" PyPDF2 "langchain<0.1"
 ```
 
-**Note:** The code in this tutorial targets those older `openai` and `langchain` interfaces. It has been checked for valid syntax and imports, not run end to end against the OpenAI API and a database.
-
+**Note** The code in this tutorial targets those older `openai` and `langchain` interfaces. It has been checked for valid syntax and imports, not run end to end against the OpenAI API and a database.
+{: .note}
 Set up the environment variable for the OpenAI API key. Ensure the `OPENAI_API_KEY` environment variable is set. For instructions, refer to [this guide](https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety).
 
-### Step 2: Extracting Text from PDFs
+### <span class="step-label">Step 2</span>Extracting Text from PDFs {#step-2-extracting-text-from-pdfs}
 
 Use the following function to extract text from PDF files using PyPDF2:
 
@@ -58,7 +84,7 @@ def extract_text_from_pdf(pdf_path):
         return None
 ```
 
-### Step 3: Generating Embeddings with OpenAI API
+### <span class="step-label">Step 3</span>Generating Embeddings with OpenAI API {#step-3-generating-embeddings-with-openai-api}
 
 The class below generates embeddings using the OpenAI API. The `embed_documents` method allows specifying a model, with the default being `"text-embedding-3-large"`:
 
@@ -97,12 +123,12 @@ class OpenAIEmbeddings:
 
 The loop divides `valid_texts` by number of texts, not by tokens: each request carries up to `batch_size` strings, whatever their length. A batch of long texts can still exceed the API's token limit, so lower `batch_size` if that happens.
 
-**Note:** You can specify a different model based on your needs, considering factors like vector size, computational efficiency, and data type.
+**Note** You can specify a different model based on your needs, considering factors like vector size, computational efficiency, and data type.
+{: .note}
+### <span class="step-label">Step 4</span>PostgreSQL Database Setup {#step-4-postgresql-database-setup}
 
-### Step 4: PostgreSQL Database Setup
-
-**Note:** We assume that you already have a database set up.
-
+**Note** We assume that you already have a database set up.
+{: .note}
 Configure your database connection details:
 
 ```python
@@ -117,8 +143,8 @@ db_config = {
 connection_string = f"postgresql://{db_config['user']}:{db_config['password']}@{db_config['host']}:{db_config['port']}/{db_config['dbname']}"
 ```
 
-**Note:** For production, avoid exposing sensitive information in your code. Use environment variables or secure vaults to manage credentials.
-
+**Note** For production, avoid exposing sensitive information in your code. Use environment variables or secure vaults to manage credentials.
+{: .note}
 #### Clearing and Rebuilding the Database
 
 Given that our dataset consists of only 6 PDF files totaling 23MB, it's efficient to clear and rebuild the entire database rather than updating or appending new data. This approach is feasible for small datasets and simplifies the data management process. 
@@ -139,7 +165,7 @@ def clear_tables():
 clear_tables()
 ```
 
-### Step 5: Processing and Storing PDFs
+### <span class="step-label">Step 5</span>Processing and Storing PDFs {#step-5-processing-and-storing-pdfs}
 
 Process the PDFs and store them in the database:
 
@@ -190,7 +216,7 @@ pdf_directory = '/path/to/your/pdfs'
 process_and_store_pdfs(pdf_directory)
 ```
 
-### Step 6: Data Insertion Verification
+### <span class="step-label">Step 6</span>Data Insertion Verification {#step-6-data-insertion-verification}
 
 Verify that the data was correctly inserted:
 
@@ -212,8 +238,8 @@ connection.close()
 
 This tutorial has guided you through setting up a system to extract text from PDFs, generate embeddings using the OpenAI API, and store the data in a PostgreSQL database. You can enhance this system by improving text extraction, refining text chunking methods, and optimizing database interactions.
 
-**Note:** This tutorial is designed for hands-on practice.
-
+**Note** This tutorial is designed for hands-on practice.
+{: .note}
 There are many ways to improve the efficiency of a RAG database, such as:
 - Enhancing entity recognition and boundary detection
 - Optimizing database schema and indexing
