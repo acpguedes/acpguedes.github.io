@@ -9,9 +9,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Mono:wght@400;500&display=swap">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {%- for href in page.styles %}
+  <link rel="stylesheet" href="{{ href | relative_url }}">
+  {%- endfor %}
   {% if page.art %}<meta property="og:image" content="{{ page.art | absolute_url }}">{% endif %}
   {% feed_meta %}
   <script src="{{ '/assets/js/nav.js' | relative_url }}" defer></script>
+  {%- for src in page.scripts %}
+  <script src="{{ src | relative_url }}" defer></script>
+  {%- endfor %}
 </head>
 <body>
   {% include site-nav.html %}
