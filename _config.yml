@@ -2,6 +2,7 @@
 title: "Aureliano Guedes"
 author: "Aureliano Guedes"
 description: "Articles on AI for refinery operations and technical document search, by Aureliano Guedes."
+intro: "I build predictive models for refinery engineers and write about the data and code behind them."
 linkedin_url: "https://www.linkedin.com/in/aureliano-guedes-30918021/"
 github_url: "https://github.com/acpguedes"
 profile_image: "/assets/images/profile.jpeg"
@@ -14,6 +15,8 @@ baseurl: "" # Empty because the site is served from the domain root
 incremental: false
 future: false
 timezone: UTC
+kramdown:
+  auto_ids: true
 
 # Plugins
 plugins:
@@ -32,6 +35,8 @@ exclude:
   - vendor
   - posts/
   - "*.py"
+  - design-system/
+  - ds-bundle/
 
 # Default layouts
 defaults:

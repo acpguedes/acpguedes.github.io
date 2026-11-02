@@ -1,0 +1,12 @@
+{%- comment %} include.post = a post; include.class = extra class on the full plate {% endcomment %}
+{%- assign p = include.post %}
+{%- if p.art %}
+<figure class="plate {{ include.class }}">
+  <div class="plate-frame"><img src="{{ p.art | relative_url }}" alt="{{ p.art_alt | escape }}" width="520" height="600"></div>
+  {%- if p.art_caption %}<figcaption>{{ p.art_caption }}</figcaption>{% endif %}
+</figure>
+<figure class="plate-crop">
+  <div><img src="{{ p.art_crop | default: p.art | relative_url }}" alt="{{ p.art_crop_alt | default: p.art_alt | escape }}" width="380" height="270"></div>
+  {%- if p.art_crop_caption %}<figcaption>{{ p.art_crop_caption }}</figcaption>{% endif %}
+</figure>
+{%- endif %}

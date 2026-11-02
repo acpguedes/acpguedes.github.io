@@ -1,0 +1,34 @@
+---
+layout: default
+description: "Articles on AI for refinery operations and technical document search, by Aureliano Guedes."
+---
+{%- assign lead = site.posts.first %}
+<main class="home">
+  {%- if lead %}
+  <section class="cover">
+    <div class="cover-text">
+      <p class="meta"><span class="kind">{{ lead.kind | default: "Article" }}</span>{% if lead.section %}<span aria-hidden="true">·</span><span>{{ lead.section }}</span>{% endif %}<span aria-hidden="true">·</span>{% include post-date.html date=lead.date %}</p>
+      <h1><a href="{{ lead.url | relative_url }}">{% if lead.display_title %}{{ lead.display_title }}{% else %}{{ lead.title | escape }}{% endif %}</a></h1>
+      {%- if lead.description %}<p class="dek">{{ lead.description | escape }}</p>{% endif %}
+      <a class="cta" href="{{ lead.url | relative_url }}">Read the {{ lead.kind | default: "article" | downcase }} →</a>
+      {%- if lead.steps %}
+      <div class="cover-steps">
+        <p class="label">In {{ lead.steps.size }} steps</p>
+        <ol>
+          {%- for s in lead.steps %}
+          <li><a href="{{ lead.url | relative_url }}#{{ s.id }}"><span>{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>{{ s.label }}</a></li>
+          {%- endfor %}
+        </ol>
+      </div>
+      {%- endif %}
+    </div>
+    {% include post-art.html post=lead %}
+  </section>
+  {%- else %}
+  <div class="page">
+    <h1 class="page-title">{{ site.title | escape }}</h1>
+    <p>No articles published yet.</p>
+  </div>
+  {%- endif %}
+  {% include author-band.html %}
+</main>

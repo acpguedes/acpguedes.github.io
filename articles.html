@@ -4,17 +4,26 @@ title: "Articles"
 description: "All articles by Aureliano Guedes, newest first."
 permalink: /articles/
 ---
-
-<h1>Articles</h1>
-{%- if site.posts.size > 0 %}
-<ol class="archive-list">
-  {%- for post in site.posts %}
-  <li>
-    {% include post-date.html date=post.date %}
-    <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-  </li>
-  {%- endfor %}
-</ol>
-{%- else %}
-<p>No articles published yet.</p>
-{%- endif %}
+<main class="page">
+  <p class="meta">Archive · newest first</p>
+  <h1 class="page-title">Articles</h1>
+  {%- if site.posts.size > 0 %}
+  <ol class="archive">
+    {%- for post in site.posts %}
+    <li>
+      {% include post-date.html date=post.date %}
+      <div class="entry">
+        <p class="kind">{{ post.kind | default: "Article" }}{% if post.section %} · {{ post.section }}{% endif %}</p>
+        <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+        {%- if post.description %}<p>{{ post.description | escape }}</p>{% endif %}
+      </div>
+      {%- if post.art_crop %}
+      <a class="thumb" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ post.art_crop | relative_url }}" alt="" width="380" height="270" loading="lazy"></a>
+      {%- endif %}
+    </li>
+    {%- endfor %}
+  </ol>
+  {%- else %}
+  <p>No articles published yet.</p>
+  {%- endif %}
+</main>
