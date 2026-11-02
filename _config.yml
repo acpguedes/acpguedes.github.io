@@ -1,43 +1,39 @@
 # _config.yml
-title: "Blog do Aure"
+title: "Aureliano Guedes"
 author: "Aureliano Guedes"
-linkedin_url: "https://www.linkedin.com/in/aureliano-guedes-3091802"
-cover_image: "/assets/images/cover.jpeg"
+description: "Articles on AI for refinery operations and technical document search, by Aureliano Guedes."
+linkedin_url: "https://www.linkedin.com/in/aureliano-guedes-30918021/"
+github_url: "https://github.com/acpguedes"
 profile_image: "/assets/images/profile.jpeg"
-skills: "Lead Data Scientist | Industrial GenAI & ML Strategy | Refining & Energy Transition"
 
-# URL do site
-url: "http://127.0.0.1:4000"
-baseurl: "" # Deixe vazio se o site estiver na raiz do domínio
+# Public address of the site
+url: "https://acpguedes.github.io"
+baseurl: "" # Empty because the site is served from the domain root
 
-# Configurações de construção
+# Build settings
 incremental: false
-future: true
+future: false
+timezone: UTC
 
 # Plugins
 plugins:
   - jekyll-feed
-  - jekyll-paginate
 
-# Paginação
-paginate: 5
-paginate_path: "/page:num/"
-
-# Configuração de URLs permanentes para postagens
+# Permalinks for posts without an explicit permalink
 permalink: /:categories/:title/
 
-# Excluir arquivos da construção
+# Keep everything that is not part of the site out of the build
 exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
   - Rakefile
-  - site.pages/
-  - site.posts/
   - node_modules
   - vendor
+  - posts/
+  - "*.py"
 
-# Configurações padrão para páginas e postagens
+# Default layouts
 defaults:
   - scope:
       path: ""

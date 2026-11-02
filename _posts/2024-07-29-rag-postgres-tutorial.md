@@ -1,30 +1,29 @@
 ---
 layout: post
-title: "Rag Postgres Tutorial"
+title: "Storing PDF embeddings in PostgreSQL for RAG"
+description: "Extract text from PDFs, generate embeddings with Python, and store them in PostgreSQL."
 date: 2024-07-29
-categories: ml-engineer rag rag-postgres-tutorial
+categories: ml-engineer rag
 permalink: /ml-engineer/rag/rag-postgres-tutorial/
 ---
 
-# Tutorial: Creating a Database for RAG using PDFs and PostgreSQL
-
 ## Introduction
 
-In this tutorial, we will guide you through the process of creating a database for Retrieval-Augmented Generation (RAG) applications using PDFs as source of information and PostgreSQL as database to store. This setup leverages the OpenAI API to generate text embeddings, which are then stored in a PostgreSQL database to facilitate efficient search and information retrieval.
+By the end of this tutorial, the text of your PDF files will be split into chunks, converted to embeddings with the OpenAI API, and stored in PostgreSQL. That prepares your data for Retrieval-Augmented Generation (RAG): an application can then search those chunks and pass the relevant ones to a language model. The retrieval and generation steps are outside the scope of this tutorial.
 
-Before starting, ensure that PostgreSQL is installed and configured. If you need assistance, follow the [official installation guide](https://www.postgresql.org/docs/current/tutorial-install.html) and [create a new database](#).
+Before starting, ensure that PostgreSQL is installed and configured. If you need assistance, follow the [official installation guide](https://www.postgresql.org/docs/current/tutorial-install.html) and [create a new database](https://www.postgresql.org/docs/current/tutorial-createdb.html).
 
 ## Prerequisites
 
 To follow along, you will need:
 - Python installed on your machine
-- PostgreSQL installed and configured
+- PostgreSQL installed and configured, with the `embedding` extension that `PGEmbedding` enables
 - Access to the OpenAI API
 - The following Python libraries:
   - `psycopg2`
-  - `openai`
+  - `openai` (below version 1.0)
   - `PyPDF2`
-  - `langchain`
+  - `langchain` (below version 0.1)
 
 ## Hands-on 
 
@@ -33,8 +32,10 @@ To follow along, you will need:
 First, install the necessary libraries:
 
 ```bash
-pip install psycopg2 openai PyPDF2 langchain
+pip install psycopg2 "openai<1" PyPDF2 "langchain<0.1"
 ```
+
+**Note:** The code in this tutorial targets those older `openai` and `langchain` interfaces. It has been checked for valid syntax and imports, not run end to end against the OpenAI API and a database.
 
 Set up the environment variable for the OpenAI API key. Ensure the `OPENAI_API_KEY` environment variable is set. For instructions, refer to [this guide](https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety).
 
@@ -73,7 +74,7 @@ class OpenAIEmbeddings:
             return []
 
         all_embeddings = []
-        batch_size is set to 2048  # Token limit per batch
+        batch_size = 2048  # Maximum number of texts per request
 
         for i in range(0, len(valid_texts), batch_size):
             batch_texts = valid_texts[i:i + batch_size]
@@ -93,6 +94,8 @@ class OpenAIEmbeddings:
 
         return all_embeddings
 ```
+
+The loop divides `valid_texts` by number of texts, not by tokens: each request carries up to `batch_size` strings, whatever their length. A batch of long texts can still exceed the API's token limit, so lower `batch_size` if that happens.
 
 **Note:** You can specify a different model based on your needs, considering factors like vector size, computational efficiency, and data type.
 
@@ -209,7 +212,7 @@ connection.close()
 
 This tutorial has guided you through setting up a system to extract text from PDFs, generate embeddings using the OpenAI API, and store the data in a PostgreSQL database. You can enhance this system by improving text extraction, refining text chunking methods, and optimizing database interactions.
 
-**Note:** This tutorial is designed for hands-on practice. If you want to understand how an embedding database works in depth, [see this article](#). 
+**Note:** This tutorial is designed for hands-on practice.
 
 There are many ways to improve the efficiency of a RAG database, such as:
 - Enhancing entity recognition and boundary detection
