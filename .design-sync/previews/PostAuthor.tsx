@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { PostAuthor, profilePhoto } from "@acpguedes/applied-science";
-const Paper = ({ children }: { children: ReactNode }) => <div style={{ ...{ background: "var(--paper)", padding: 24 } }}>{children}</div>;
+const Paper = ({ children }: { children: ReactNode }) => <div style={{ background: "var(--paper)", padding: 24 }}>{children}</div>;
 
 export const Default = () => (
   <Paper>

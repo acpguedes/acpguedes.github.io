@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { CodeBlock, Note, PostAuthor, PostContent, StepHeading, TableOfContents, profilePhoto } from "@acpguedes/applied-science";
-const Paper = ({ children }: { children: ReactNode }) => <div style={{ ...{ background: "var(--paper)" } }}>{children}</div>;
+const Paper = ({ children }: { children: ReactNode }) => <div style={{ background: "var(--paper)" }}>{children}</div>;
 
 const toc = [
   { id: "introduction", label: "Introduction" },

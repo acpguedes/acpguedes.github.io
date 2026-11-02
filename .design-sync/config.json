@@ -17,9 +17,6 @@
     "SiteFooter": {
       "cardMode": "column"
     },
-    "AuthorBand": {
-      "cardMode": "column"
-    },
     "ArchiveList": {
       "cardMode": "column"
     },
@@ -48,10 +45,6 @@
       "cardMode": "column",
       "viewport": "1280x460"
     },
-    "Cover": {
-      "cardMode": "column",
-      "viewport": "1280x1000"
-    },
     "PostHeader": {
       "cardMode": "column",
       "viewport": "1280x1000"
@@ -67,6 +60,17 @@
     "TableOfContents": {
       "cardMode": "column",
       "viewport": "1280x420"
+    },
+    "HomeIntro": {
+      "cardMode": "column",
+      "viewport": "1280x560"
+    },
+    "LatestArticle": {
+      "cardMode": "column"
+    },
+    "TopicGrid": {
+      "cardMode": "column",
+      "viewport": "1000x620"
     }
   },
   "readmeHeader": ".design-sync/conventions.md"

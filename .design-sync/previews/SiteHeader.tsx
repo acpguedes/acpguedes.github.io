@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { SiteHeader, profilePhoto } from "@acpguedes/applied-science";
-const Paper = ({ children }: { children: ReactNode }) => <div style={{ ...{ background: "var(--paper)" } }}>{children}</div>;
+const Paper = ({ children }: { children: ReactNode }) => <div style={{ background: "var(--paper)" }}>{children}</div>;
 
 const posts = [
   { title: "Storing PDF embeddings in PostgreSQL for RAG", href: "#tutorial", date: "July 29, 2024", isoDate: "2024-07-29" },

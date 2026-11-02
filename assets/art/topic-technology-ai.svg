@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 270" width="380" height="270">
+  <defs>
+    <pattern id="h" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="5" stroke="#1E2230" stroke-width="1"></line></pattern>
+    <pattern id="hd" width="3" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="3" stroke="#1E2230" stroke-width="1"></line></pattern>
+    <pattern id="hr" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="4" stroke="#B23F28" stroke-width="1.1"></line></pattern>
+    <pattern id="g" width="6" height="4" patternUnits="userSpaceOnUse"><line x1="0" y1="0.5" x2="6" y2="0.5" stroke="#1E2230" stroke-width="0.6"></line></pattern>
+  </defs>
+  <rect width="380" height="270" fill="#FAF6EC"></rect>
+  <rect x="0" y="226" width="380" height="44" fill="url(#g)" opacity="0.55"></rect>
+  <g stroke="#1E2230" stroke-width="0.8" fill="none"><line x1="66" y1="62" x2="190" y2="36"></line><line x1="66" y1="62" x2="190" y2="92"></line><line x1="66" y1="62" x2="190" y2="148"></line><line x1="66" y1="62" x2="190" y2="204"></line><line x1="66" y1="120" x2="190" y2="36"></line><line x1="66" y1="120" x2="190" y2="92"></line><line x1="66" y1="120" x2="190" y2="148"></line><line x1="66" y1="120" x2="190" y2="204"></line><line x1="66" y1="178" x2="190" y2="36"></line><line x1="66" y1="178" x2="190" y2="92"></line><line x1="66" y1="178" x2="190" y2="148"></line><line x1="66" y1="178" x2="190" y2="204"></line><line x1="190" y1="36" x2="314" y2="88"></line><line x1="190" y1="36" x2="314" y2="152"></line><line x1="190" y1="92" x2="314" y2="88"></line><line x1="190" y1="92" x2="314" y2="152"></line><line x1="190" y1="148" x2="314" y2="88"></line><line x1="190" y1="148" x2="314" y2="152"></line><line x1="190" y1="204" x2="314" y2="88"></line><line x1="190" y1="204" x2="314" y2="152"></line></g>
+  <polyline points="66,120 190,92 314,152" fill="none" stroke="#B23F28" stroke-width="2"></polyline>
+  <circle cx="70" cy="66" r="15" fill="url(#h)"></circle><circle cx="66" cy="62" r="15" fill="#FAF6EC" stroke="#1E2230" stroke-width="1.5"></circle>
+  <circle cx="70" cy="124" r="15" fill="url(#h)"></circle><circle cx="66" cy="120" r="15" fill="#FAF6EC" stroke="#1E2230" stroke-width="1.5"></circle>
+  <circle cx="66" cy="120" r="15" fill="url(#hr)" stroke="#B23F28" stroke-width="1.2"></circle><circle cx="66" cy="120" r="4.5" fill="#B23F28"></circle>
+  <circle cx="70" cy="182" r="15" fill="url(#h)"></circle><circle cx="66" cy="178" r="15" fill="#FAF6EC" stroke="#1E2230" stroke-width="1.5"></circle>
+  <circle cx="194" cy="40" r="15" fill="url(#h)"></circle><circle cx="190" cy="36" r="15" fill="#FAF6EC" stroke="#1E2230" stroke-width="1.5"></circle>
+  <circle cx="194" cy="96" r="15" fill="url(#h)"></circle><circle cx="190" cy="92" r="15" fill="#FAF6EC" stroke="#1E2230" stroke-width="1.5"></circle>
+  <circle cx="190" cy="92" r="15" fill="url(#hr)" stroke="#B23F28" stroke-width="1.2"></circle><circle cx="190" cy="92" r="4.5" fill="#B23F28"></circle>
+  <circle cx="194" cy="152" r="15" fill="url(#h)"></circle><circle cx="190" cy="148" r="15" fill="#FAF6EC" stroke="#1E2230" stroke-width="1.5"></circle>
+  <circle cx="194" cy="208" r="15" fill="url(#h)"></circle><circle cx="190" cy="204" r="15" fill="#FAF6EC" stroke="#1E2230" stroke-width="1.5"></circle>
+  <circle cx="318" cy="92" r="15" fill="url(#h)"></circle><circle cx="314" cy="88" r="15" fill="#FAF6EC" stroke="#1E2230" stroke-width="1.5"></circle>
+  <circle cx="318" cy="156" r="15" fill="url(#h)"></circle><circle cx="314" cy="152" r="15" fill="#FAF6EC" stroke="#1E2230" stroke-width="1.5"></circle>
+  <circle cx="314" cy="152" r="15" fill="url(#hr)" stroke="#B23F28" stroke-width="1.2"></circle><circle cx="314" cy="152" r="4.5" fill="#B23F28"></circle>
+</svg>
