@@ -1,0 +1,20 @@
+---
+layout: default
+title: "Articles"
+description: "All articles by Aureliano Guedes, newest first."
+permalink: /articles/
+---
+
+<h1>Articles</h1>
+{%- if site.posts.size > 0 %}
+<ol class="archive-list">
+  {%- for post in site.posts %}
+  <li>
+    {% include post-date.html date=post.date %}
+    <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+  </li>
+  {%- endfor %}
+</ol>
+{%- else %}
+<p>No articles published yet.</p>
+{%- endif %}
