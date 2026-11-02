@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 270" width="380" height="270">
+  <defs>
+    <pattern id="h" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="5" stroke="#1E2230" stroke-width="1"></line></pattern>
+    <pattern id="hd" width="3" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="3" stroke="#1E2230" stroke-width="1"></line></pattern>
+    <pattern id="hr" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="4" stroke="#B23F28" stroke-width="1.1"></line></pattern>
+    <pattern id="g" width="6" height="4" patternUnits="userSpaceOnUse"><line x1="0" y1="0.5" x2="6" y2="0.5" stroke="#1E2230" stroke-width="0.6"></line></pattern>
+  </defs>
+  <rect width="380" height="270" fill="#FAF6EC"></rect>
+  <rect x="0" y="226" width="380" height="44" fill="url(#g)" opacity="0.55"></rect>
+  <rect x="33" y="31" width="176" height="108" fill="url(#h)"></rect>
+  <rect x="26" y="24" width="176" height="108" fill="#FAF6EC" stroke="#1E2230" stroke-width="1.5"></rect>
+  <line x1="26" y1="44" x2="202" y2="44" stroke="#1E2230" stroke-width="1.2"></line>
+  <g fill="none" stroke="#1E2230" stroke-width="1.1"><circle cx="38" cy="34" r="4"></circle><circle cx="52" cy="34" r="4"></circle><circle cx="66" cy="34" r="4"></circle></g>
+  <text x="38" y="68" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="15" font-weight="500" fill="#B23F28">$</text>
+  <rect x="54" y="60" width="118" height="4" fill="#B23F28"></rect>
+  <g fill="#1E2230"><rect x="38" y="82" width="134" height="3"></rect><rect x="38" y="94" width="112" height="3"></rect><rect x="38" y="106" width="146" height="3"></rect><rect x="38" y="118" width="74" height="3"></rect></g>
+  <rect x="168" y="194" width="56" height="32" fill="url(#hd)"></rect><rect x="164" y="190" width="56" height="36" fill="#FAF6EC" stroke="#1E2230" stroke-width="1.5"></rect>
+  <text x="192" y="215" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="17" font-weight="500" fill="#1E2230">1</text>
+  <rect x="228" y="154" width="56" height="72" fill="url(#hd)"></rect><rect x="224" y="150" width="56" height="76" fill="#FAF6EC" stroke="#1E2230" stroke-width="1.5"></rect>
+  <text x="252" y="175" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="17" font-weight="500" fill="#1E2230">2</text>
+  <rect x="288" y="114" width="56" height="112" fill="url(#hd)"></rect><rect x="284" y="110" width="56" height="116" fill="#FAF6EC" stroke="#1E2230" stroke-width="1.5"></rect>
+  <text x="312" y="135" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="17" font-weight="500" fill="#1E2230">3</text>
+  <path d="M120 139 C 124 172, 140 176, 164 178 C 196 176, 204 150, 224 138 C 256 136, 266 112, 284 98" fill="none" stroke="#B23F28" stroke-width="1.4" stroke-dasharray="4 3"></path>
+  <circle cx="312" cy="70" r="20" fill="url(#hr)" stroke="#B23F28" stroke-width="1.4"></circle><circle cx="312" cy="70" r="13" fill="#FAF6EC"></circle>
+  <path d="M305 70 L310 76 L320 63" fill="none" stroke="#B23F28" stroke-width="2.4"></path>
+</svg>

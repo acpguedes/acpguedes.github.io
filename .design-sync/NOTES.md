@@ -7,7 +7,7 @@
 - Styles switch at 960 px and 1200 px, so wide components declare a 1280 px `viewport` override. `TableOfContents` `inline` is hidden at that width and has no card.
 - Fonts come from Google Fonts at runtime (`runtimeFontPrefixes`).
 - `assets/css/style.css` has no font import because the site loads fonts with a `<link>`. `scripts/build.mjs` prepends the `@import` to `dist/style.css`, since designs only receive the stylesheet.
-- The visual source of truth is `Blog Prototype.dc.html` in the Claude Design project, not `handoff/`, which differs from it in several places. Compare the site against the rendered prototype after any CSS change.
+- `GUIDELINES.md` at the repository root holds the site's style and publishing rules. The visual reference is `Blog Prototype.dc.html`, not `handoff/`, except for the home page, which has its own layout.
 
 ## Re-sync risks
 

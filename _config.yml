@@ -3,12 +3,21 @@ title: "Aureliano Guedes"
 author: "Aureliano Guedes"
 description: "Technology and AI: article commentary, market analysis and trends, tutorials and tips, by Aureliano Guedes."
 intro: "I write about technology, mainly AI: how to apply it and how to lead projects that deliver results."
-tagline: "Technology is only a means to building real solutions."
+tagline: "Technology is only a means to building <em>real solutions</em>."
+author_note: "I’m Aureliano Guedes, a lead data scientist in refining and renewable fuels."
 topics:
-  - "Technology & AI"
-  - "Article commentary"
-  - "Market analysis & trends"
-  - "Tutorials & tips"
+  - label: "Technology & AI"
+    art: /assets/art/topic-technology-ai.svg
+    alt: "Engraving: a neural network with one signal path traced through its layers."
+  - label: "Article commentary"
+    art: /assets/art/topic-article-commentary.svg
+    alt: "Engraving: a page with a marked passage and a note pulled out beside it."
+  - label: "Market analysis & trends"
+    art: /assets/art/topic-market-trends.svg
+    alt: "Engraving: a bar series with a trend line continuing past the data."
+  - label: "Tutorials & tips"
+    art: /assets/art/topic-tutorials-tips.svg
+    alt: "Engraving: a terminal and numbered steps climbing to a checked result."
 linkedin_url: "https://www.linkedin.com/in/aureliano-guedes-30918021/"
 github_url: "https://github.com/acpguedes"
 profile_image: "/assets/images/profile.jpeg"
@@ -41,6 +50,7 @@ exclude:
   - vendor
   - posts/
   - "*.py"
+  - GUIDELINES.md
   - design-system/
   - ds-bundle/
 

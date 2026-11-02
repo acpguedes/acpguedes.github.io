@@ -1,34 +1,52 @@
 ---
 layout: default
+title: "Technology and AI in practice"
 ---
 {%- assign lead = site.posts.first %}
-{%- assign number_words = "zero,one,two,three,four,five,six,seven,eight,nine,ten,eleven,twelve" | split: "," %}
 <main class="home">
-  {% include author-band.html %}
-  {%- if lead %}
-  <section class="cover">
-    <div class="cover-text">
-      <p class="meta"><span class="kind">{{ lead.kind | default: "Article" }}</span>{% if lead.section %}<span aria-hidden="true">·</span><span>{{ lead.section }}</span>{% endif %}<span aria-hidden="true">·</span>{% include post-date.html date=lead.date %}</p>
-      <h1><a href="{{ lead.url | relative_url }}">{% if lead.display_title %}{{ lead.display_title }}{% else %}{{ lead.title | escape }}{% endif %}</a></h1>
-      {%- if lead.description %}<p class="dek">{{ lead.description | escape }}</p>{% endif %}
-      <a class="cta" href="{{ lead.url | relative_url }}">Read the {{ lead.kind | default: "article" | downcase }} →</a>
-      {%- if lead.steps %}
-      <div class="cover-steps">
-        <p class="label">In {{ number_words[lead.steps.size] | default: lead.steps.size }} steps</p>
-        <ol>
-          {%- for s in lead.steps %}
-          <li><a href="{{ lead.url | relative_url }}#{{ s.id }}"><span>{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>{{ s.label }}</a></li>
-          {%- endfor %}
-        </ol>
+  <div class="home-grid">
+    <section class="home-intro">
+      <p class="meta"><span class="kind">The blog</span></p>
+      <h1>{{ site.tagline }}</h1>
+      <p class="dek">{{ site.intro }}</p>
+      <div class="home-author">
+        <img src="{{ site.profile_image | relative_url }}" alt="{{ site.author | escape }}" width="48" height="48">
+        <p>{{ site.author_note }} <a href="{{ '/about/' | relative_url }}">More about me</a></p>
       </div>
+    </section>
+
+    <section class="latest">
+      <h2>Latest article</h2>
+      {%- if lead %}
+      <article class="latest-item">
+        {%- if lead.art_crop %}
+        <a class="thumb" href="{{ lead.url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ lead.art_crop | relative_url }}" alt="" width="380" height="270"></a>
+        {%- endif %}
+        <div>
+          <p class="meta"><span class="kind">{{ lead.kind | default: "Article" }}</span><span aria-hidden="true">·</span>{% include post-date.html date=lead.date %}</p>
+          <h3><a href="{{ lead.url | relative_url }}">{{ lead.title | escape }}</a></h3>
+          {%- if lead.description %}
+          <p class="latest-dek">{{ lead.description | escape }}</p>
+          {%- endif %}
+        </div>
+      </article>
+      <a class="cta" href="{{ '/articles/' | relative_url }}">All articles →</a>
+      {%- else %}
+      <p>No articles published yet.</p>
       {%- endif %}
-    </div>
-    {% include post-art.html post=lead %}
-  </section>
-  {%- else %}
-  <div class="page">
-    <h1 class="page-title">{{ site.title | escape }}</h1>
-    <p>No articles published yet.</p>
+    </section>
+
+    <section class="topics" aria-label="What this blog covers">
+      <ul>
+        {%- for topic in site.topics %}
+        <li>
+          <figure>
+            <div><img src="{{ topic.art | relative_url }}" alt="{{ topic.alt | escape }}" width="380" height="270"></div>
+            <figcaption><span>{{ forloop.index | prepend: '0' }}</span>{{ topic.label | escape }}</figcaption>
+          </figure>
+        </li>
+        {%- endfor %}
+      </ul>
+    </section>
   </div>
-  {%- endif %}
 </main>

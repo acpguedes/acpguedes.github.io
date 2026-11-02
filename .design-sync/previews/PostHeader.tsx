@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { PostHeader, profilePhoto, ragPostgresPlate, ragPostgresPlateCrop } from "@acpguedes/applied-science";
-const Paper = ({ children }: { children: ReactNode }) => <div style={{ ...{ background: "var(--paper)" } }}>{children}</div>;
+const Paper = ({ children }: { children: ReactNode }) => <div style={{ background: "var(--paper)" }}>{children}</div>;
 
 export const Tutorial = () => (
   <Paper>

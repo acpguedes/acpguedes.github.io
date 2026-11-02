@@ -14,13 +14,6 @@ art_alt: "Engraving: a PDF page unfolds into chunks, the chunks become vectors a
 art_crop_alt: "Detail of the engraving: vectors arriving in a PostgreSQL cylinder."
 art_caption: "Plate I — A page unfolds into chunks, chunks into vectors, vectors into PostgreSQL."
 art_crop_caption: "Plate I, detail — vectors arriving in PostgreSQL."
-steps:
-  - { id: step-1-environment-setup, label: "Environment setup" }
-  - { id: step-2-extracting-text-from-pdfs, label: "Extracting text from PDFs" }
-  - { id: step-3-generating-embeddings-with-openai-api, label: "Generating embeddings" }
-  - { id: step-4-postgresql-database-setup, label: "PostgreSQL setup" }
-  - { id: step-5-processing-and-storing-pdfs, label: "Processing and storing PDFs" }
-  - { id: step-6-data-insertion-verification, label: "Verifying the insert" }
 toc:
   - { id: introduction, label: "Introduction" }
   - { id: prerequisites, label: "Prerequisites" }

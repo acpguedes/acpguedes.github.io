@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { Note, PostContent } from "@acpguedes/applied-science";
-const Paper = ({ children }: { children: ReactNode }) => <div style={{ ...{ background: "var(--paper)" } }}>{children}</div>;
+const Paper = ({ children }: { children: ReactNode }) => <div style={{ background: "var(--paper)" }}>{children}</div>;
 
 export const InsideAnArticle = () => (
   <Paper>
