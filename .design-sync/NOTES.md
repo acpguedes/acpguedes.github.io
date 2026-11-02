@@ -6,6 +6,8 @@
 - Cards render on a white body, so every preview wraps itself in a local `Paper` div. This is card presentation only.
 - Styles switch at 960 px and 1200 px, so wide components declare a 1280 px `viewport` override. `TableOfContents` `inline` is hidden at that width and has no card.
 - Fonts come from Google Fonts at runtime (`runtimeFontPrefixes`).
+- `assets/css/style.css` has no font import because the site loads fonts with a `<link>`. `scripts/build.mjs` prepends the `@import` to `dist/style.css`, since designs only receive the stylesheet.
+- The visual source of truth is `Blog Prototype.dc.html` in the Claude Design project, not `handoff/`, which differs from it in several places. Compare the site against the rendered prototype after any CSS change.
 
 ## Re-sync risks
 

@@ -1,8 +1,14 @@
 # _config.yml
 title: "Aureliano Guedes"
 author: "Aureliano Guedes"
-description: "Articles on AI for refinery operations and technical document search, by Aureliano Guedes."
-intro: "I build predictive models for refinery engineers and write about the data and code behind them."
+description: "Technology and AI: article commentary, market analysis and trends, tutorials and tips, by Aureliano Guedes."
+intro: "I write about technology, mainly AI: how to apply it and how to lead projects that deliver results."
+tagline: "Technology is only a means to building real solutions."
+topics:
+  - "Technology & AI"
+  - "Article commentary"
+  - "Market analysis & trends"
+  - "Tutorials & tips"
 linkedin_url: "https://www.linkedin.com/in/aureliano-guedes-30918021/"
 github_url: "https://github.com/acpguedes"
 profile_image: "/assets/images/profile.jpeg"

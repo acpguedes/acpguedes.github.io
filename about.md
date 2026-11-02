@@ -23,10 +23,12 @@ One of my projects, Catalyze AI, monitors catalyst deactivation in diesel hydrot
 
 I also lead AcelIA, an industrial copilot that draws on plant data and engineering records to help operators make decisions faster. In one plant trial, we tested a change to a temperature limit recommended by its APC Expert agent and saw hydrotreated diesel output rise by 0.3%.
 
+
+<ul class="link-row">
+  <li><a href="{{ site.github_url }}">GitHub</a></li>
+  <li><a href="{{ site.linkedin_url }}">LinkedIn</a></li>
+  <li><a href="{{ '/feed.xml' | relative_url }}">Feed</a></li>
+</ul>
+
   </div>
-  <ul class="link-row">
-    <li><a href="{{ site.github_url }}">GitHub</a></li>
-    <li><a href="{{ site.linkedin_url }}">LinkedIn</a></li>
-    <li><a href="{{ '/feed.xml' | relative_url }}">Feed</a></li>
-  </ul>
 </main>
