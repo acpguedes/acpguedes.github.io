@@ -47,7 +47,7 @@ The URL comes from the categories and the file name: `/ml-engineer/rag/my-articl
 ### Before merging
 
 - [ ] The body is a finished article. A sentence announcing a topic is a draft, so it stays in `_drafts/`.
-- [ ] The article has a full plate, a crop, and alternative text for both.
+- [ ] The article has a full plate, a crop, and alternative text for both. The build fails otherwise.
 - [ ] The body starts at `##`. The layout already prints the title as the page's only H1.
 - [ ] Every link works. There are no placeholders such as `href="#"`.
 - [ ] Code examples run, or the article says what was checked and what was not.
@@ -76,6 +76,8 @@ The reference is `assets/art/rag-postgres-tutorial.svg`.
 | Alternative text | Start the full plate with "Engraving:" and the crop with "Detail of the engraving:", then say what the image shows. |
 
 The frame and caption come from the layout, so do not draw them.
+
+**The build enforces this.** `_plugins/plate_check.rb` stops `jekyll build` when a published article lacks `art`, `art_crop`, `art_alt`, `art_crop_alt` or `art_caption`, when a plate is not an SVG, or when its file does not exist. Drafts and posts with `published: false` are exempt until they are ready.
 
 The four topic illustrations on the home page follow the same rules at 380 × 270. They are listed under `topics` in `_config.yml`, with files in `assets/art/topic-*.svg`.
 
@@ -174,6 +176,7 @@ Intentional differences from the prototype:
 | `_config.yml` | Site settings and home page text |
 | `index.html`, `articles.html`, `about.md`, `404.html` | Pages |
 | `_layouts/`, `_includes/` | Shared markup |
+| `_plugins/plate_check.rb` | Build check that every article has its plate |
 | `assets/css/style.css`, `assets/js/nav.js` | Styles and menu behaviour |
 | `assets/art/`, `assets/images/` | Plates, topic illustrations and the portrait |
 | `design-system/`, `.design-sync/` | React components for Claude Design, not part of the site |
@@ -182,7 +185,12 @@ Intentional differences from the prototype:
 
 **New files outside the site** must be added to `exclude` in `_config.yml`. The Pages builder publishes any Markdown file it finds, including files without front matter.
 
-**Publishing:** a merge to `main` deploys the site. The repository's Pages source is currently set to `legacy`, so both the Pages build (Jekyll 3.10) and `.github/workflows/pages.yml` (Jekyll 4.3.3) deploy on every push, and the last one to finish stays live. Until the source is changed to GitHub Actions under **Settings → Pages**, a change must work on both.
+**Pull requests:** `.github/workflows/check.yml` builds the site on every pull request, including articles scheduled for a later date. Do not merge while it is failing.
+
+**Publishing:** a merge to `main` deploys the site. The repository's Pages source is currently set to `legacy`, so both the Pages build (Jekyll 3.10) and `.github/workflows/pages.yml` (Jekyll 4.3.3) deploy on every push, and the last one to finish stays live. Until the source is changed to GitHub Actions under **Settings → Pages**:
+
+- A change must work on both builds.
+- The Pages build ignores `_plugins`, so an article merged without a plate still goes live even though the workflow fails. The check on the pull request is the protection that counts.
 
 After publishing, check on the live site:
 
