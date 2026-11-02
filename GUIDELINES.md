@@ -38,9 +38,11 @@ toc:                     # optional; use it in long articles
 |---|---|
 | `title` | Says what the reader gets. Write technical names correctly: RAG, PostgreSQL. |
 | `description` | One sentence. It appears on the home page, in the archive and in the feed. |
-| `kind` | One of `Tutorial`, `Tips`, `Commentary`, `Market analysis`. Add a new one only when none of these fits. |
+| `kind` | One of `Tutorial`, `Tips`, `Commentary`, `Market analysis`, `Analysis`. Add a new one only when none of these fits. |
 | `art_caption` | Number plates in publication order, in Roman numerals. Plate I is the RAG tutorial. |
 | `toc` | Each `id` must match a heading's id. kramdown generates it from the heading text. |
+| `styles`, `scripts` | Optional lists of files that only this article loads. Use them for heavy assets, such as the charts of an article exported from a notebook. |
+| `feed` | Set `excerpt_only: true` when the body is too heavy for a feed, so the feed carries only the description. |
 
 The URL comes from the categories and the file name: `/ml-engineer/rag/my-article/`.
 
@@ -95,6 +97,7 @@ The four topic illustrations on the home page follow the same rules at 380 × 27
 | Tips | One problem and one recommendation per tip, with the trade-off. |
 | Commentary | A link to the article, its author and date. Keep what it says separate from your view of it. |
 | Market analysis | The source and date of every figure. Keep data separate from your reading of it. |
+| Analysis | The data source, the method and its code, and where the method failed. Keep data separate from your reading of it. |
 
 ### Markup
 
@@ -178,6 +181,7 @@ Intentional differences from the prototype:
 | `_layouts/`, `_includes/` | Shared markup |
 | `_plugins/plate_check.rb` | Build check that every article has its plate |
 | `assets/css/style.css`, `assets/js/nav.js` | Styles and menu behaviour |
+| `assets/css/notebook-article.css`, `assets/js/notebook-article.js`, `assets/js/plotly-cartesian.min.js` | Charts, tables and code folds of articles exported from a notebook, loaded only by those articles |
 | `assets/art/`, `assets/images/` | Plates, topic illustrations and the portrait |
 | `design-system/`, `.design-sync/` | React components for Claude Design, not part of the site |
 

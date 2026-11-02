@@ -1,0 +1,212 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="520" height="600" viewBox="0 0 520 600" role="img" aria-labelledby="title description">
+<title id="title">Engraving: a Brazilian voting machine and its tally slip lead to a folded map and chart comparing the partial count with a national runoff projection.</title>
+<desc id="description">Brazil, 2026 presidential runoff. The dashed ink line is the absolute error of the running tally and the vermilion line is the absolute error of the gradient boosting projection, in percentage points. The chart uses the notebook’s 12 chronological checkpoints from 0.5% to 20% of valid votes counted. At the 5% checkpoint, 24,754 stations had reported.</desc>
+
+<defs>
+  <pattern id="h" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M.5 0V5" stroke="#1E2230" stroke-width="1"/></pattern>
+  <pattern id="hd" width="3" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M.5 0V3" stroke="#1E2230" stroke-width="1"/></pattern>
+  
+  <pattern id="floor" width="6" height="4" patternUnits="userSpaceOnUse"><path d="M0 .5H6" stroke="#1E2230" stroke-width=".6"/></pattern>
+  <path id="br" d="M48.22,128.90 L53.67,123.57 L57.02,121.38 L57.07,119.56 L55.95,118.25 L54.86,118.68 L55.59,114.76 L53.14,114.62 L52.26,110.97 L47.53,110.36 L47.67,107.26 L47.02,105.99 L47.71,105.52 L48.50,101.42 L47.98,100.01 L46.77,99.37 L46.85,97.15 L42.61,97.05 L41.76,94.40 L42.41,94.36 L41.85,91.39 L33.41,88.39 L31.00,86.35 L31.14,82.23 L28.25,82.62 L24.65,85.09 L19.61,85.08 L19.76,81.61 L17.94,82.96 L15.99,82.90 L15.15,81.68 L13.68,81.55 L14.15,80.57 L12.00,77.13 L12.58,75.75 L13.92,75.09 L14.42,72.00 L19.07,69.66 L21.06,69.77 L22.11,62.53 L20.78,60.39 L20.79,58.73 L22.48,58.59 L22.56,57.72 L21.26,57.48 L21.23,56.05 L25.54,56.10 L26.28,55.32 L27.32,57.39 L28.96,58.31 L30.68,58.16 L35.50,54.94 L33.51,54.27 L33.29,51.30 L32.30,50.71 L36.11,51.36 L40.82,49.62 L41.63,48.74 L41.34,48.10 L42.49,48.00 L42.72,49.53 L43.98,50.93 L43.02,53.68 L43.74,55.89 L45.11,56.96 L46.19,57.07 L48.86,55.52 L51.82,55.82 L51.87,54.24 L58.59,55.12 L61.43,50.48 L62.18,50.37 L63.97,55.63 L65.15,56.00 L65.21,57.58 L63.55,59.46 L64.24,60.14 L68.15,60.50 L68.23,62.79 L69.91,61.29 L76.37,63.50 L77.45,64.84 L77.09,66.10 L79.66,65.40 L83.97,66.61 L87.28,66.52 L93.38,70.96 L96.98,71.71 L97.78,72.43 L98.90,76.72 L98.02,80.49 L90.17,89.75 L88.85,100.73 L87.76,104.68 L85.52,107.65 L85.14,110.01 L83.35,111.00 L82.83,112.37 L76.94,113.24 L70.30,116.73 L68.43,119.00 L67.56,125.38 L57.63,137.00 L57.02,135.71 L57.99,134.63 L56.71,133.07 L49.65,128.65 L48.22,128.90 Z"/>
+  <clipPath id="land"><use href="#br" xlink:href="#br"/></clipPath>
+  <style>
+    text { font-family: 'IBM Plex Mono', ui-monospace, monospace; fill: #1E2230; font-weight: 400; }
+    .label { font-size:10px; letter-spacing:1.35px; }
+    .small { font-size:9px; letter-spacing:1px; }
+    .section { font-size:11px; letter-spacing:1.65px; }
+    .red { fill:#B23F28; }
+    .axis { font-size:9px; letter-spacing:1px; }
+    .key { font-size:9px; fill:#FAF6EC; }
+  </style>
+</defs>
+<rect width="520" height="600" fill="#FAF6EC"/>
+<rect y="519" width="520" height="81" fill="url(#floor)" opacity=".48"/>
+
+<!-- Chart: eleicoes_prediction_en.ipynb, 2026 model comparison and tabulation checkpoints.
+     Outline: Brazil from johan/world.geo.json, simplified at plate scale. -->
+<!-- A folded national sheet. The left panel is a locator, not an electoral map. -->
+<g stroke-linejoin="round" transform="translate(0 -8)">
+  <path d="M55 90L175 60H452L472 79V245H175L55 275Z" fill="url(#h)"/>
+  <g transform="matrix(1 -.25 0 1 48 82)">
+    <path d="M0 0H120V185H0Z" fill="#FAF6EC" stroke="#1E2230" stroke-width="1.4"/>
+    <path d="M112 1H119V184H114L109 156Z" fill="url(#h)"/>
+    <text x="12" y="24" class="section">BRAZIL</text>
+    <path d="M12 33H69" fill="none" stroke="#1E2230" stroke-width="1"/>
+    <use href="#br" xlink:href="#br" transform="translate(3 4)" fill="url(#h)"/>
+    <use href="#br" xlink:href="#br" fill="#FAF6EC"/>
+    <g clip-path="url(#land)">
+      <path d="M31 42Q35 86 27 145M63 40Q63 82 58 140M4 78Q54 72 105 80M8 103Q58 98 105 108" fill="none" stroke="#1E2230" opacity=".33" stroke-width=".8" stroke-dasharray="2 2.5"/>
+    </g>
+    <use href="#br" xlink:href="#br" fill="none" stroke="#1E2230" stroke-width="1.2"/>
+    <path d="M12 148H30" fill="none" stroke="#1E2230" stroke-width="1"/>
+    <text x="12" y="164" class="small">2026 RUNOFF</text>
+  </g>
+  <g transform="translate(168 52)">
+    <path d="M0 0H277L297 19V185H0Z" fill="#FAF6EC" stroke="#1E2230" stroke-width="1.4"/>
+    <path d="M277 0V19H297Z" fill="url(#hd)" stroke="#1E2230" stroke-width="1.1"/>
+    <path d="M1 3L5 9V179L1 184Z" fill="url(#h)"/>
+    <text x="17" y="24" class="section">ABSOLUTE ERROR (PP)</text>
+    <g transform="translate(18 41)">
+      <path d="M0 0H18" stroke="#1E2230" fill="none" stroke-width="1.3" stroke-dasharray="3.5 2.4"/>
+      <text x="24" y="3" class="small">RUNNING TALLY</text>
+      <path d="M129 0H147" stroke="#B23F28" fill="none" stroke-width="1.5"/>
+      <circle cx="138" cy="0" r="2.1" fill="#B23F28"/>
+      <text x="153" y="3" class="small red">PROJECTION</text>
+    </g>
+    <g fill="none" stroke="#1E2230" stroke-width="1">
+      <path d="M36 52V127H267"/>
+      <path d="M32 127H36M32 94H36M32 61H36"/>
+      <path d="M36 94H264M36 61H264" stroke-dasharray="1.3 3.2" opacity=".33"/>
+      <path d="M36.00 127.00L36.00 131.00" /><path d="M92.25 127.00L92.25 131.00" /><path d="M148.50 127.00L148.50 131.00" /><path d="M261.00 127.00L261.00 131.00" />
+    </g>
+    <g class="axis">
+      <text x="26" y="130" text-anchor="end">0</text>
+      <text x="26" y="97" text-anchor="end">1</text>
+      <text x="26" y="64" text-anchor="end">2</text>
+      <text x="36.0" y="145" text-anchor="middle">0%</text><text x="92.25" y="145" text-anchor="middle">5%</text><text x="148.5" y="145" text-anchor="middle">10%</text><text x="261.0" y="145" text-anchor="middle">20%</text>
+    </g>
+    <g fill="none" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M41.62,82.85 L47.36,104.56 L52.88,111.42 L58.50,126.24 L64.12,116.61 L69.75,112.68 L75.38,110.00 L81.00,107.23 L86.74,106.84 L92.36,106.38 L148.61,84.40 L261.11,54.57" stroke="#1E2230" stroke-width="1.35" stroke-dasharray="3.5 2.4"/>
+      <circle cx="41.62" cy="82.85" r="2" stroke="#1E2230" fill="#FAF6EC" stroke-width="1.1"/>
+<circle cx="58.50" cy="126.24" r="2" stroke="#1E2230" fill="#FAF6EC" stroke-width="1.1"/>
+<circle cx="92.36" cy="106.38" r="2" stroke="#1E2230" fill="#FAF6EC" stroke-width="1.1"/>
+<circle cx="148.61" cy="84.40" r="2" stroke="#1E2230" fill="#FAF6EC" stroke-width="1.1"/>
+<circle cx="261.11" cy="54.57" r="2" stroke="#1E2230" fill="#FAF6EC" stroke-width="1.1"/>
+      <path d="M41.62,122.58 L47.36,118.88 L52.88,112.38 L58.50,111.85 L64.12,111.62 L69.75,111.79 L75.38,111.62 L81.00,111.36 L86.74,111.42 L92.36,111.06 L148.61,110.24 L261.11,109.11" stroke="#B23F28" stroke-width="1.5"/>
+      <circle cx="41.62" cy="122.58" r="2.35" fill="#B23F28"/>
+<circle cx="58.50" cy="111.85" r="2.35" fill="#B23F28"/>
+<circle cx="92.36" cy="111.06" r="2.35" fill="#B23F28"/>
+<circle cx="148.61" cy="110.24" r="2.35" fill="#B23F28"/>
+<circle cx="261.11" cy="109.11" r="2.35" fill="#B23F28"/>
+    </g>
+    <text x="36" y="169" class="small">VALID VOTES COUNTED</text>
+  </g>
+</g>
+
+<!-- The highlighted station return links the polling station to a national checkpoint. -->
+<g stroke-linecap="round" stroke-linejoin="round">
+  <path d="M162 319C213 331 255 302 276 275S296 242 305 237" fill="none" stroke="#B23F28" stroke-width="1.3" stroke-dasharray="3 3.6"/>
+  <path d="M300 237.8L308.5 234.6L303.6 242.2" fill="none" stroke="#B23F28" stroke-width="1.35"/>
+  <path d="M257 297L279 304H291" fill="none" stroke="#1E2230" stroke-width="1"/>
+  <text x="300" y="306" class="label red">5% OF VALID VOTES</text>
+  <g transform="translate(300 314)">
+    <path d="M0 2H109" stroke="#1E2230" stroke-width="1" opacity=".55" fill="none"/>
+    <path d="M5.45 1.00L5.45 4.00" stroke="#1E2230" stroke-width="1" opacity=".75"/><path d="M10.90 1.00L10.90 4.00" stroke="#1E2230" stroke-width="1" opacity=".75"/><path d="M16.35 1.00L16.35 4.00" stroke="#1E2230" stroke-width="1" opacity=".75"/><path d="M21.80 1.00L21.80 4.00" stroke="#1E2230" stroke-width="1" opacity=".75"/><path d="M27.25 -0.20L27.25 4.00" stroke="#1E2230" stroke-width="1" opacity=".75"/><path d="M32.70 1.00L32.70 4.00" stroke="#1E2230" stroke-width="1" opacity=".75"/><path d="M38.15 1.00L38.15 4.00" stroke="#1E2230" stroke-width="1" opacity=".75"/><path d="M43.60 1.00L43.60 4.00" stroke="#1E2230" stroke-width="1" opacity=".75"/><path d="M49.05 1.00L49.05 4.00" stroke="#1E2230" stroke-width="1" opacity=".75"/><path d="M54.50 -0.20L54.50 4.00" stroke="#1E2230" stroke-width="1" opacity=".75"/><path d="M59.95 1.00L59.95 4.00" stroke="#1E2230" stroke-width="1" opacity=".75"/><path d="M65.40 1.00L65.40 4.00" stroke="#1E2230" stroke-width="1" opacity=".75"/><path d="M70.85 1.00L70.85 4.00" stroke="#1E2230" stroke-width="1" opacity=".75"/><path d="M76.30 1.00L76.30 4.00" stroke="#1E2230" stroke-width="1" opacity=".75"/><path d="M81.75 -0.20L81.75 4.00" stroke="#1E2230" stroke-width="1" opacity=".75"/><path d="M87.20 1.00L87.20 4.00" stroke="#1E2230" stroke-width="1" opacity=".75"/><path d="M92.65 1.00L92.65 4.00" stroke="#1E2230" stroke-width="1" opacity=".75"/><path d="M98.10 1.00L98.10 4.00" stroke="#1E2230" stroke-width="1" opacity=".75"/><path d="M103.55 1.00L103.55 4.00" stroke="#1E2230" stroke-width="1" opacity=".75"/><path d="M109.00 -0.20L109.00 4.00" stroke="#1E2230" stroke-width="1" opacity=".75"/>
+    <path d="M0 0H5.46V4H0Z" fill="#B23F28"/>
+  </g>
+  <text x="300" y="333" class="small">24,754 STATIONS</text>
+</g>
+
+<g transform="translate(18 29) scale(.93)">
+<!-- Printer enclosure and aperture at the rear of the machine. -->
+<g stroke-linejoin="round">
+  <path d="M116 371L130 351Q132 347 139 348L215 357Q220 358 222 362L227 383L125 382Z" fill="#FAF6EC" stroke="#1E2230" stroke-width="1.5"/>
+  <path d="M214 358L220 361L227 383L218 382Z" fill="url(#hd)"/>
+  <path d="M128 356L209 366L216 369L134 360Z" fill="#1E2230"/>
+  <path d="M123 368L218 379" fill="none" stroke="#1E2230" stroke-width="1"/>
+</g>
+<!-- One thermal bulletin, lifted and curled back towards the printer behind the enclosure. -->
+<g stroke-linejoin="round" stroke-linecap="round" transform="translate(0 358) scale(1 .8) translate(0 -358)">
+  <path d="M87 270C86 260 95 252 106 252L177 242C163 245 159 256 161 264L90 278Z" fill="#FAF6EC" stroke="#1E2230" stroke-width="1.25"/>
+  <path d="M90 271C92 259 101 255 111 254L173 245C165 248 161 256 161 264L93 274Z" fill="url(#hd)"/>
+  <path d="M89 269C79 288 95 304 116 319C134 332 145 346 137 359L208 369C218 349 215 328 195 312C171 296 154 279 161 262C164 251 170 245 177 242C141 247 112 249 100 253C94 256 90 261 89 269Z" fill="#FAF6EC" stroke="#1E2230" stroke-width="1.4"/>
+  <path d="M160 263C156 280 172 298 197 315C212 329 218 347 208 368L201 367C210 349 206 330 191 318C168 299 155 283 156 273Z" fill="url(#h)"/>
+  <path d="M140 347C142 352 141 357 138 359L207 368C209 364 211 359 211 355C188 359 160 355 140 347Z" fill="url(#h)"/>
+  <g transform="translate(94 276) rotate(-8)">
+    <text x="0" y="0" class="section">BU</text>
+    <path d="M24 -4H53" stroke="#1E2230" stroke-width="1.1"/>
+    <path d="M1 8H49M3 12H41" stroke="#1E2230" stroke-width="2"/>
+    <path d="M9 20H54M14 25H59" stroke="#B23F28" stroke-width="2.5"/>
+    <path d="M22 33H64M28 38H66M36 44H71" stroke="#1E2230" stroke-width="2"/>
+  </g>
+</g>
+
+<!-- Wedge enclosure, rubber feet, and the horizontal-ruled print surface. -->
+<path d="M77 506L357 547L391 544L445 507L200 489Z" fill="url(#h)" opacity=".8"/>
+<g stroke="#1E2230" stroke-linejoin="round">
+  <path d="M85 498L112 501L110 513Q109 516 106 516L85 513Q82 513 82 510Z" fill="url(#hd)" stroke-width="1.25"/>
+  <path d="M353 528L379 531L376 542Q375 545 371 545L352 542Q349 541 350 537Z" fill="url(#hd)" stroke-width="1.25"/>
+  <path d="M70 486L377 522L381 529L379 537Q378 540 373 539L78 504Q70 503 69 498Z" fill="#FAF6EC" stroke-width="1.5"/>
+  <path d="M70 486L103 490L97 506L76 503Q71 501 69 497Z" fill="url(#hd)" stroke="none"/>
+  <path d="M70 497L376 532" fill="none" stroke-width="1"/>
+  <path d="M423 391.8Q427 404 425.5 418.9L389.4 516.4Q384 524 372.3 528.8L371.4 539.6Q379.5 541.2 386.1 533.4L426 477Q431 469 434 459L441 429Q442 424 440 419L431 401Q428 395 423 391.8Z" fill="#FAF6EC" stroke-width="1.5"/>
+  <path d="M424.2 403L431 405L440 423Q441 425 440 430L434 455Q430 471 425 477L386 532Q381 539 373 539L375 531Q383 524 389 516L425 418Z" fill="url(#h)" stroke="none"/>
+  <path d="M438 426L432 450Q428 467 423 474L386 527M432 431L429 440M430 443L427 452M427 455L424 464" fill="none" stroke-width="1"/>
+</g>
+
+<!-- Sloping face of a Brazilian electronic voting machine. -->
+<g transform="matrix(1 .118 -.34 .92 120 356)" stroke-linejoin="round" stroke-linecap="round">
+  <path d="M5 17H162Q169 17 173 10L181 -3Q184 -8 192 -8H287Q298 -8 303 0L312 17Q315 22 315 28V134Q315 140 308 146L303 149H7Q0 149 0 142V25Q0 20 5 17Z" fill="#FAF6EC" stroke="#1E2230" stroke-width="1.5"/>
+  <path d="M6 19H160Q168 19 172 13L182 0Q186 -5 192 -5H287Q295 -5 299 1L306 13" fill="none" stroke="#1E2230" stroke-width="1"/>
+  <path d="M3 138Q3 146 10 146H304L311 139" fill="none" stroke="#1E2230" stroke-width="1"/>
+  <path d="M8 127L12 129H157L165 124L169 39L165 30H12L7 35Z" fill="#FAF6EC" stroke="#1E2230" stroke-width="1.25"/>
+  <path d="M12 35H164L159 42H18V117L11 124Z" fill="url(#hd)" stroke="#1E2230" stroke-width="1"/>
+  <path d="M18 42H159V117H18Z" fill="#FAF6EC" stroke="#1E2230" stroke-width="1.25"/>
+  <path d="M18 117H159L165 124H12Z" fill="url(#h)" stroke="#1E2230" stroke-width="1"/>
+  <g fill="none" stroke="#1E2230" stroke-width="3.2" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M60 89V70H72M60 79H69M80 70H90M85 70V89M80 89H90M99 89V70L106 81L113 70V89"/>
+  </g>
+  <path d="M15 22H62M65 22H75" fill="none" stroke="#1E2230" stroke-width="1"/>
+  <path d="M174 16L183 2Q187 -2 194 -2H284Q292 -2 297 5L305 20L304 124Q302 130 297 131H176Q171 131 170 125Z" fill="#FAF6EC" stroke="#1E2230" stroke-width="1.25"/>
+  <path d="M178 18L185 8Q188 3 194 3H283Q290 3 294 10L298 17" fill="none" stroke="#1E2230" stroke-width="1"/>
+  <text x="239" y="13" text-anchor="middle" class="small">JUSTIÇA ELEITORAL</text>
+  <g transform="translate(193 21)">
+          <path d="M1 1H21L23 2V12L21 14H1L-1 12V3Z" fill="#1E2230"/>
+          <path d="M2 2H20M0 3V10" fill="none" stroke="#FAF6EC" stroke-width=".7" opacity=".72"/>
+          <text x="10.8" y="10.6" text-anchor="middle" class="key">1</text>
+        </g>
+<g transform="translate(223 21)">
+          <path d="M1 1H21L23 2V12L21 14H1L-1 12V3Z" fill="#1E2230"/>
+          <path d="M2 2H20M0 3V10" fill="none" stroke="#FAF6EC" stroke-width=".7" opacity=".72"/>
+          <text x="10.8" y="10.6" text-anchor="middle" class="key">2</text>
+        </g>
+<g transform="translate(253 21)">
+          <path d="M1 1H21L23 2V12L21 14H1L-1 12V3Z" fill="#1E2230"/>
+          <path d="M2 2H20M0 3V10" fill="none" stroke="#FAF6EC" stroke-width=".7" opacity=".72"/>
+          <text x="10.8" y="10.6" text-anchor="middle" class="key">3</text>
+        </g>
+<g transform="translate(193 40)">
+          <path d="M1 1H21L23 2V12L21 14H1L-1 12V3Z" fill="#1E2230"/>
+          <path d="M2 2H20M0 3V10" fill="none" stroke="#FAF6EC" stroke-width=".7" opacity=".72"/>
+          <text x="10.8" y="10.6" text-anchor="middle" class="key">4</text>
+        </g>
+<g transform="translate(223 40)">
+          <path d="M1 1H21L23 2V12L21 14H1L-1 12V3Z" fill="#1E2230"/>
+          <path d="M2 2H20M0 3V10" fill="none" stroke="#FAF6EC" stroke-width=".7" opacity=".72"/>
+          <text x="10.8" y="10.6" text-anchor="middle" class="key">5</text>
+        </g>
+<g transform="translate(253 40)">
+          <path d="M1 1H21L23 2V12L21 14H1L-1 12V3Z" fill="#1E2230"/>
+          <path d="M2 2H20M0 3V10" fill="none" stroke="#FAF6EC" stroke-width=".7" opacity=".72"/>
+          <text x="10.8" y="10.6" text-anchor="middle" class="key">6</text>
+        </g>
+<g transform="translate(193 59)">
+          <path d="M1 1H21L23 2V12L21 14H1L-1 12V3Z" fill="#1E2230"/>
+          <path d="M2 2H20M0 3V10" fill="none" stroke="#FAF6EC" stroke-width=".7" opacity=".72"/>
+          <text x="10.8" y="10.6" text-anchor="middle" class="key">7</text>
+        </g>
+<g transform="translate(223 59)">
+          <path d="M1 1H21L23 2V12L21 14H1L-1 12V3Z" fill="#1E2230"/>
+          <path d="M2 2H20M0 3V10" fill="none" stroke="#FAF6EC" stroke-width=".7" opacity=".72"/>
+          <text x="10.8" y="10.6" text-anchor="middle" class="key">8</text>
+        </g>
+<g transform="translate(253 59)">
+          <path d="M1 1H21L23 2V12L21 14H1L-1 12V3Z" fill="#1E2230"/>
+          <path d="M2 2H20M0 3V10" fill="none" stroke="#FAF6EC" stroke-width=".7" opacity=".72"/>
+          <text x="10.8" y="10.6" text-anchor="middle" class="key">9</text>
+        </g>
+<g transform="translate(223 78)">
+          <path d="M1 1H21L23 2V12L21 14H1L-1 12V3Z" fill="#1E2230"/>
+          <path d="M2 2H20M0 3V10" fill="none" stroke="#FAF6EC" stroke-width=".7" opacity=".72"/>
+          <text x="10.8" y="10.6" text-anchor="middle" class="key">0</text>
+        </g>
+  <path d="M183 106H211L213 108V117L210 119H182L180 117V109Z" fill="#FAF6EC" stroke="#1E2230" stroke-width="1.1"/>
+  <path d="M219 106H246L248 108V117L245 119H219L216 117V109Z" fill="url(#h)" stroke="#1E2230" stroke-width="1.1"/>
+  <path d="M255 102H290L293 105V118L289 121H254L251 118V106Z" fill="url(#hd)" stroke="#1E2230" stroke-width="1.25"/>
+  <path d="M185 115H207M221 115H242M256 116H286" fill="none" stroke="#FAF6EC" stroke-width="2"/>
+  <path d="M185 115H206M222 115H241M257 116H285" fill="none" stroke="#1E2230" stroke-width="1"/>
+  <path d="M13 134H69M72 134H82" fill="none" stroke="#1E2230" stroke-width="1"/>
+  <g fill="#1E2230"><circle cx="165" cy="138" r="1.2"/><circle cx="292" cy="137" r="1.2"/></g>
+</g>
+</g>
+</svg>
