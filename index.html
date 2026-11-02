@@ -1,9 +1,10 @@
 ---
 layout: default
-description: "Articles on AI for refinery operations and technical document search, by Aureliano Guedes."
 ---
 {%- assign lead = site.posts.first %}
+{%- assign number_words = "zero,one,two,three,four,five,six,seven,eight,nine,ten,eleven,twelve" | split: "," %}
 <main class="home">
+  {% include author-band.html %}
   {%- if lead %}
   <section class="cover">
     <div class="cover-text">
@@ -13,7 +14,7 @@ description: "Articles on AI for refinery operations and technical document sear
       <a class="cta" href="{{ lead.url | relative_url }}">Read the {{ lead.kind | default: "article" | downcase }} →</a>
       {%- if lead.steps %}
       <div class="cover-steps">
-        <p class="label">In {{ lead.steps.size }} steps</p>
+        <p class="label">In {{ number_words[lead.steps.size] | default: lead.steps.size }} steps</p>
         <ol>
           {%- for s in lead.steps %}
           <li><a href="{{ lead.url | relative_url }}#{{ s.id }}"><span>{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>{{ s.label }}</a></li>
@@ -30,5 +31,4 @@ description: "Articles on AI for refinery operations and technical document sear
     <p>No articles published yet.</p>
   </div>
   {%- endif %}
-  {% include author-band.html %}
 </main>

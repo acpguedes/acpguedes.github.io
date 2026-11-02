@@ -1,9 +1,10 @@
-<section class="author-band" aria-label="About the author">
+<section class="author-band" aria-label="About this site">
   <div class="who">
     <img src="{{ site.profile_image | relative_url }}" alt="{{ site.author | escape }}" width="60" height="60">
     <div>
       <p>{{ site.intro }}</p>
-      <p class="aside">Before refineries, bioinformatics.</p>
+      <p class="aside">{{ site.tagline }}</p>
+      <p class="meta">{% for topic in site.topics %}{% unless forloop.first %}<span aria-hidden="true">·</span>{% endunless %}<span{% if forloop.first %} class="kind"{% endif %}>{{ topic | escape }}</span>{% endfor %}</p>
     </div>
   </div>
   <ul class="link-row">

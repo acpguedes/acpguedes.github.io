@@ -1,6 +1,6 @@
 # Applied Science Magazine: how to build with it
 
-A printed-magazine look for a technical blog: warm paper, one dark ink, one vermilion accent, a serif for reading and a mono for labels.
+A printed-magazine look for a blog on technology and AI: warm paper, one dark ink, one vermilion accent, a serif for reading and a mono for labels.
 
 ## Setup
 
@@ -8,7 +8,7 @@ No provider or theme wrapper. Components come from `window.AppliedScience` and a
 
 Components do not render `<main>`. Wrap each page's content yourself:
 
-- `<main className="home">` for a cover page: `Cover` followed by `AuthorBand`.
+- `<main className="home">` for the home page: `AuthorBand` first, then `Cover`.
 - `<main className="page">` for archive, About and error pages.
 - `<main>` with `PostHeader` and `PostContent` for an article.
 
@@ -54,6 +54,14 @@ const { SiteHeader, Cover, AuthorBand, SiteFooter, profilePhoto, ragPostgresPlat
     posts={[{ title: "Storing PDF embeddings in PostgreSQL for RAG", href: "/rag/", date: "July 29, 2024", isoDate: "2024-07-29" }]}
   />
   <main className="home">
+    <AuthorBand
+      name="Aureliano Guedes"
+      photoSrc={profilePhoto}
+      intro="I write about technology, mainly AI: how to apply it and how to lead projects that deliver results."
+      aside="Technology is only a means to building real solutions."
+      topics={["Technology & AI", "Article commentary", "Market analysis & trends", "Tutorials & tips"]}
+      links={[{ label: "About", href: "/about/", accent: true }, { label: "All articles", href: "/articles/" }]}
+    />
     <Cover
       title={<>Storing <em>PDF embeddings</em> in PostgreSQL for RAG</>}
       href="/rag/"
@@ -63,12 +71,6 @@ const { SiteHeader, Cover, AuthorBand, SiteFooter, profilePhoto, ragPostgresPlat
       isoDate="2024-07-29"
       description="Extract text from PDFs, generate embeddings with Python, and store them in PostgreSQL."
       plate={{ src: ragPostgresPlate, alt: "Engraving of a PDF page flowing into PostgreSQL.", cropSrc: ragPostgresPlateCrop }}
-    />
-    <AuthorBand
-      name="Aureliano Guedes"
-      photoSrc={profilePhoto}
-      intro="I build predictive models for refinery engineers and write about the data and code behind them."
-      links={[{ label: "About", href: "/about/", accent: true }, { label: "All articles", href: "/articles/" }]}
     />
   </main>
   <SiteFooter author="Aureliano Guedes" year={2026} links={[{ label: "GitHub", href: "https://github.com/acpguedes" }]} />

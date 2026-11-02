@@ -29,7 +29,7 @@ export const ArticleBody = () => (
     <Note>The code in this tutorial targets those older interfaces.</Note>
     <PostAuthor
       photoSrc={profilePhoto}
-      intro="I build predictive models for refinery engineers and write about the data and code behind them."
+      intro="I write about technology, mainly AI: how to apply it and how to lead projects that deliver results."
       links={[
         { label: "About Aureliano", href: "/about/", accent: true },
         { label: "All articles", href: "/articles/" },
