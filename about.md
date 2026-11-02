@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "About"
-description: "Aureliano Guedes builds predictive models for refinery engineers."
+description: "Aureliano Guedes leads data science teams applying machine learning and generative AI to refining and renewable fuels."
 permalink: /about/
 ---
 <main class="page">
@@ -12,12 +12,16 @@ permalink: /about/
   </div>
   <div class="about-body" markdown="1">
 
-I build predictive models for refinery engineers and write about the data and code behind them.
+Lead Data Scientist & Digital Solutions Architect
 {: .lede}
 
-Before refineries, I worked in bioinformatics.
+I lead data science teams that apply machine learning and generative AI to refining and renewable fuels. I follow each project from the business problem and the process behind it to the impact we measure after deployment. My work on operational excellence aims at reliability and process safety, lower emissions and energy use, and higher margins.
 
-This site collects articles on AI for refinery operations and technical document search.
+I started working with data in 2008, in academic research in the biological sciences, mainly genomics. After a master's in bioinformatics at the University of São Paulo (IME-USP), I worked in insurtech, real estate, and facilities management for power distribution before moving into refining.
+
+One of my projects, Catalyze AI, monitors catalyst deactivation in diesel hydrotreating and won the Americas category at the 2025 Gartner Eye on Innovation Awards for Oil & Gas. We also use soft sensors to estimate product quality from live process data between lab tests, so operators can adjust the process sooner and run closer to product specifications, which improves refining margins. To keep models like these working, my team built an industrial MLOps pipeline that validates and deploys them, monitors their performance in the plant, and retrains them as operating conditions change.
+
+I also lead AcelIA, an industrial copilot that draws on plant data and engineering records to help operators make decisions faster. In one plant trial, we tested a change to a temperature limit recommended by its APC Expert agent and saw hydrotreated diesel output rise by 0.3%.
 
   </div>
   <ul class="link-row">
